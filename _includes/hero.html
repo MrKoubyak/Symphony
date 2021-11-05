@@ -1,0 +1,24 @@
+<section class="hero d-flex align-items-center h-50">
+    {% if page.trailer %}
+    <video autoplay muted loop poster="{{ page.image | absolute_url }}" class="hero">
+        <source src="{{ page.trailer }}">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.mp4" type="video/mp4">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.webm" type="video/webm">
+        <source src="https://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.ogv" type="video/ogg">
+    </video>
+    {% endif %}
+
+    {% if page.image %}
+    <picture>
+        <source media="(min-width:800px)" srcset="{{ page.image | absolute_url }}">
+        <img src="{{ page.image | absolute_url }}" alt="{{ page.title | escape }}" class="background">
+    </picture>
+    {% endif %}
+
+    <div class="container">
+        <h1 class="display-4">{{ page.title | escape }}</h1>
+        {% if page.excerpt %}
+        <p class="lead">{{ page.excerpt | escape }}</p>
+        {% endif %}
+    </div>
+</section>

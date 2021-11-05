@@ -1,0 +1,85 @@
+<header id="header">
+    <!-- Social Network -->
+    <span class="d-lg-none">&nbsp;</span>
+    <div id="NavTop" class="d-none d-lg-block">
+        {% if site.data.social %}
+        <ul class="nav justify-content-end">
+            {% for item in site.data.social %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ item.link }}" title="Follow us on {{ item.name | capitalize }}"><i class="fab fa-{{ item.name | downcase }}"></i></a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+
+    <!-- Site Menu -->
+    <nav id="NavMain" class="navbar navbar-expand-lg navbar-light">
+        <div class="container border rounded bg-white p-2 shadow">
+            <!-- Logo -->
+            <div id="logo" class="border rounded bg-white shadow">
+                <a href="{{ site.url }}" title="{{ site.title | escape }}">
+                    <img src="{{ "/assets/images/logo.png" | absolute_url }}" width="100" alt="{{ site.title | escape }}">
+                </a>
+            </div>
+
+            <!-- Responsive Toggle Button -->
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarContent" 
+                aria-controls="navbarContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation -->
+            <div id="navbarContent" class="collapse navbar-collapse p-2 pt-5 p-lg-0">
+                {% if site.data.navigation %}
+                <!-- Site -->
+                <div id="sitemap" class="me-auto">
+                    <ul class="navbar-nav nav-pills">
+                        {% for item in site.data.navigation %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if page.url == item.link %}active" aria-current="page"{% endif %} href="{{ item.link | absolute_url }}">{{ item.name | escape }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                <hr />
+                {% if site.data.network %}
+                <!-- Network -->
+                <div id="network">
+                    <ul class="navbar-nav">
+                        {% for item in site.data.network %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ item.link | absolute_url }}" title="{{ item.name }}">
+                                {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
+                                {{item.name}}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                <hr />
+                {% if site.data.social %}
+                <!-- Social Network -->
+                <div class="d-lg-none">
+                    <h4>Follow us</h4>
+                    <ul class="nav justify-content-center ">
+                        {% for item in site.data.social %}
+                        <li class="nav-item">
+                            <a class="nav-link link-light" href="{{ item.link }}" title="Follow us on {{ item.name | capitalize }}"><i class="fab fa-{{ item.name | downcase }}"></i></a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
+</header>

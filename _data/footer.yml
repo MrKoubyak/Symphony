@@ -1,0 +1,21 @@
+- title: Legal Information
+  links:
+  - name: Terms of Service
+    link: /news/
+  - name: Privacy Policy
+    link: /games/
+  - name: Cookie Policy
+    link: https://yaka.studio
+  - name: Code of Conduct
+    link: /about/
+  - name: Legal Information
+    link: /contact/
+
+- title: Our Studio
+  links:
+  - name: Our Games
+    link: /games/
+  - name: Our Company
+    link: /about/
+  - name: Contact
+    link: /contact/

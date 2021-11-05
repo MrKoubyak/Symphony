@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article>
+    <header>
+        <h1>{{ page.title | escape }}</h1>
+        <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+    </header>
+    <section>
+        {{ content }}
+    </section>
+    <footer>
+
+    </footer>
+</article>

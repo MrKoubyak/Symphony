@@ -1,0 +1,10 @@
+- name: News
+  link: /news/
+- name: Games
+  link: /games/
+- name: Studio
+  link: https://yaka.studio
+- name: About
+  link: /about/
+- name: Contact
+  link: /contact/
