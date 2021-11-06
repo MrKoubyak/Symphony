@@ -43,7 +43,11 @@
                     <ul class="navbar-nav nav-pills">
                         {% for item in site.data.navigation %}
                         <li class="nav-item">
-                            <a class="nav-link {% if page.url == item.link %}active" aria-current="page"{% endif %} href="{{ item.link | absolute_url }}">{{ item.name | escape }}</a>
+                            <a class="nav-link{% if page.url == item.link %} active{% endif %}" 
+                            {% if page.url == item.link %}aria-current="page"{% endif %} 
+                            href="{{ item.link | absolute_url }}">
+                                {{ item.name | escape }}
+                            </a>
                         </li>
                         {% endfor %}
                     </ul>
