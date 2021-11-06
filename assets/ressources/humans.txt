@@ -1,0 +1,32 @@
+---
+layout: empty
+permalink: /humans.txt
+---
+/* TEAM */
+GENERATED from Template for {{ site.title }}
+                            
+Mon rôle sur ce projet: Mon nom
+
+                            
+Site: e-mail, lien vers un formulaire de contact, etc.
+
+                            
+Twitter: votre compte Twitter
+
+                            
+Location: Ville, Pays
+
+						
+
+							
+/* THANKS */
+
+							
+Name: nom ou URL
+               
+/* SITE */
+Last update:  2021/12/01
+Standards: HTML5, CSS3   
+Components: BootStrap, jQuery
+
+Software: GitHub / Visual Studio Code
