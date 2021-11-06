@@ -2,8 +2,10 @@
 layout: empty
 permalink: /humans.txt
 ---
+{{ site.title }}
+
 /* TEAM */
-GENERATED from Template for {{ site.title }}
+GENERATED from Template for 
                             
 Mon rôle sur ce projet: Mon nom
 
@@ -25,8 +27,8 @@ Location: Ville, Pays
 Name: nom ou URL
                
 /* SITE */
-Last update:  2021/12/01
-Standards: HTML5, CSS3   
-Components: BootStrap, jQuery
-
-Software: GitHub / Visual Studio Code
+Website:        {{ site.url }}
+Last update:    {{ site.time }}
+Standards:      HTML5, CSS3   
+Components:     BootStrap, jQuery, Jekyll
+Software:       GitHub / Visual Studio Code
