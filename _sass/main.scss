@@ -45,16 +45,16 @@ span.spacer {
     padding-bottom: 10%;
     margin-bottom: 2rem;
 }
-@include media-breakpoint-up(sm) {
+@media (min-width: 576px) { 
     .hero {
-        padding-top: 20%;
+      padding-top: 20%;
     }
-}
-@include media-breakpoint-up(lg) {
+   }
+  @media (min-width: 992px) { 
     .hero {
-        padding-top: 10%;
+      padding-top: 10%;
     }
-}
+   }
 .hero .container {
     z-index: 2;
     position: relative;
