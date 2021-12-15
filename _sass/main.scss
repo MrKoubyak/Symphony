@@ -41,18 +41,27 @@ span.spacer {
     position: relative;
     overflow: hidden;
     z-index: 0;
-    padding-top: 15%;
+    padding-top: 8rem;
     padding-bottom: 10%;
+    margin-bottom: 2rem;
+}
+@include media-breakpoint-up(sm) {
+    .hero {
+        padding-top: 20%;
+    }
+}
+@include media-breakpoint-up(lg) {
+    .hero {
+        padding-top: 10%;
+    }
 }
 .hero .container {
     z-index: 2;
     position: relative;
     background:rgba(255, 255, 255, 0.8);
-    padding:2rem;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding:5%;
     border:1px solid rgba(255, 255, 255, 0.1);
-    border-radius:3px;
+    border-radius:5px;
 }
 .background {
     position: absolute;
