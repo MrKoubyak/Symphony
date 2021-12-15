@@ -1,15 +1,25 @@
 ---
 layout: default
 ---
-<article>
-    <header>
-        <h1>{{ page.title | escape }}</h1>
-        <p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-    </header>
-    <section>
-        {{ content }}
-    </section>
-    <footer>
+<!-- Hero -->
+{% include hero.html %}
 
-    </footer>
-</article>
+<!-- Content -->
+<main class="p-3" aria-label="Content">
+    <article class="container">
+        <header>
+            <p>
+                {{ page.date | date_to_string }} -   
+                {% if author %}
+                - <a href="{{ author.url }}">{{ author.name }}</a>
+                {% endif %}
+            </p>
+        </header>
+        <section>
+            {{ content }}
+        </section>
+        <footer>
+    
+        </footer>
+    </article>
+</main>
