@@ -43,7 +43,7 @@
                     <ul class="navbar-nav nav-pills">
                         {% for item in site.data.navigation %}
                         <li class="nav-item">
-                            <a class="nav-link{% if page.url == item.link %} active{% endif %}" 
+                            <a class="nav-link{% if page.url == item.link %} active{% endif %} px-3" 
                             {% if page.url == item.link %}aria-current="page"{% endif %} 
                             href="{{ item.link | absolute_url }}">
                                 {{ item.name | escape }}
@@ -74,10 +74,10 @@
                 <!-- Social Network -->
                 <div class="d-lg-none">
                     <h4>Follow us</h4>
-                    <ul class="nav justify-content-center ">
+                    <ul class="nav justify-content-center">
                         {% for item in site.data.social %}
-                        <li class="nav-item">
-                            <a class="nav-link link-light" href="{{ item.link }}" title="Follow us on {{ item.name | capitalize }}"><i class="fab fa-{{ item.name | downcase }}"></i></a>
+                        <li class="nav-item border-bottom border-5 border-primary mx-1">
+                            <a class="nav-link link-primary" href="{{ item.link }}" title="Follow us on {{ item.name | capitalize }}"><i class="fab fa-{{ item.name | downcase }}"></i></a>
                         </li>
                         {% endfor %}
                     </ul>

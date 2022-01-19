@@ -1,18 +1,20 @@
 <!doctype html>
 <html lang="{{ page.language | site.language | default: "en-us" }}">
-<head>
-    {% include head.html %}
-</head>
-<body>
-    <!-- Header -->
-    {% include header.html %}
+    <head>
+        {% include head.html %}
+    </head>
+    <body class="bg-light">
+        <!-- Header -->
+        {% include header.html %}
+        <!-- Hero -->
+        {% include hero.html %}
 
-    {{ content }}
-  
-    <!-- footer -->
-    {% include footer.html %}
+        {{ content }}
+    
+        <!-- footer -->
+        {% include footer.html %}
 
-    {% include scripts.html %}
+        {% include scripts.html %}
 
-</body>
+    </body>
 </html>

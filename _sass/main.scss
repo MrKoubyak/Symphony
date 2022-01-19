@@ -4,82 +4,70 @@
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  */
-
-body {
-    font-family: 'Basic', sans-serif;
-    /* Margin bottom by footer height */
-    margin-bottom: 60px;
-}
-
-/*
-    Header
-*/
-header
-{
-    position: absolute;
-    width: 100%;
-    z-index: 999;
-}
-
-#NavTop
-{
-    background:rgba(255, 255, 255, 0.5);
-}
-
-#logo {
-    position: absolute;
-    left: 50%;
-    top:0;
-    transform: translate(-50%, -15%);
-}
-
-span.spacer {
-    height: 40px;
-}
-
-.hero {
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    padding-top: 8rem;
-    padding-bottom: 10%;
-    margin-bottom: 2rem;
-}
-@media (min-width: 576px) { 
-    .hero {
-      padding-top: 20%;
-    }
-   }
-  @media (min-width: 992px) { 
-    .hero {
-      padding-top: 10%;
-    }
-   }
-.hero .container {
-    z-index: 2;
-    position: relative;
-    background:rgba(255, 255, 255, 0.8);
-    padding:5%;
-    border:1px solid rgba(255, 255, 255, 0.1);
-    border-radius:5px;
-}
-.background {
-    position: absolute;
-    overflow: hidden;
-    z-index: 1;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity:0.8;
-}
-
-img.blur {
-    -webkit-filter: blur(4px);
-    filter: blur(4px);
-    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
-}
-
-/*
-    Footer
-*/
+ body
+ {
+     font-family:'Basic', sans-serif;
+ }
+ h1
+ {
+     font-family: 'Jockey One', sans-serif;
+ }
+ 
+ /*
+   Header
+ */
+ #header
+ {
+   position: absolute;
+   width: 100%;
+   z-index: 999;
+ }
+ #logo
+ {
+   position: absolute;
+   left: 50%;
+   top:0;
+   transform: translate(-50%, -15%);
+ }
+ #NavTop
+ {
+   background:rgba(255, 255, 255, 0.5);
+ }
+ 
+ /*
+   Hero
+ */
+ 
+ .hero 
+ {
+   overflow: hidden;
+   z-index: 0;
+ }
+ 
+ .hero > div
+ {
+   z-index: 2;
+   background:rgba(255, 255, 255, 0.8);
+   padding:5rem;
+   border:1px solid rgba(255, 255, 255, 0.1);
+   border-radius:5px;
+ }
+ .hero .background 
+ {
+   z-index: 1;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   opacity:0.8;
+ }
+ .hero.post
+ {
+   height: 40em;
+ }
+ 
+ img.blur {
+   -webkit-filter: blur(4px);
+   filter: blur(4px);
+   filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+ }

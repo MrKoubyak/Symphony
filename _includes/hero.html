@@ -1,6 +1,6 @@
-<section class="hero d-flex align-items-center">
+<section class="hero position-relative{% if layout.splash %} vh-100{% endif %}">
     {% if page.trailer %}
-    <video autoplay muted loop poster="{{ page.image | absolute_url }}" class="hero">
+    <video autoplay muted loop poster="{{ page.image | absolute_url }}" class="background">
         <source src="{{ page.trailer }}">
         <source src="https://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.mp4" type="video/mp4">
         <source src="https://upload.wikimedia.org/wikipedia/commons/7/79/Big_Buck_Bunny_small.webm" type="video/webm">
@@ -10,15 +10,24 @@
 
     {% if page.image %}
     <picture>
-        <source media="(min-width:800px)" srcset="{{ page.image | absolute_url }}">
+        <source srcset="{{ page.image | absolute_url }}">
         <img src="{{ page.image | absolute_url }}" alt="{{ page.title | escape }}" class="background">
     </picture>
     {% endif %}
 
-    <div class="container">
-        <h1 class="display-4">{{ page.title | escape }}</h1>
-        {% if page.excerpt %}
-        <p class="lead">{{ page.excerpt | escape }}</p>
-        {% endif %}
+    <div class="container position-absolute top-50 start-50 translate-middle">
+        <div class="row align-items-center">
+            <div class="col">
+                <h1 class="display-1">{{ page.title | escape }}</h1>
+                {% if page.excerpt %}
+                <p class="lead">{{ page.excerpt | escape }}</p>
+                {% endif %}
+            </div>
+            {% id page.action %}
+            <div class="col-4 text-center">
+                <button type="button" class="btn btn-primary btn-lg">Primary</button>
+            </div>
+            {% endif %}
+        </div>
     </div>
 </section>

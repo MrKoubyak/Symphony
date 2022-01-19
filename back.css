@@ -1,0 +1,29 @@
+
+
+span.spacer {
+    height: 40px;
+  }
+
+  
+
+
+
+.hero .background 
+{
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity:0.8;
+}
+
+
+
+  
+  
+
+  
+  
