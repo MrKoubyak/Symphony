@@ -1,0 +1,56 @@
+# Files excluded
+exclude:
+  - readme.md
+
+# Jekyl plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+permalink: none
+
+collections:
+  authors:
+  games:
+    permalink: /:collection/:name
+    output: true
+
+# Default layout
+defaults:
+  - scope:
+      path: ""
+      type: "games"
+    values:
+      layout: "game"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Site Information
+title: YAKA Studio
+url: "http://studio.yaka.cloud"
+tagline: Game developer unleashed 
+logo: /assets/images/logo.png
+theme: #6f42c1
+description: > 
+  We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences.
+author:
+  name: YAKA Game Studio
+  email: contact@yaka.games
+  website: https://yaka.games
+
+twitter:
+  username: yakagamestudio
+  card: summary
+
+facebook:
+  app_id:
+  publisher: https://facebook.com/yakagamestudio
+  admins: 

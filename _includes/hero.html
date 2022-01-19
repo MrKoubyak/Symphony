@@ -23,7 +23,7 @@
                 <p class="lead">{{ page.excerpt | escape }}</p>
                 {% endif %}
             </div>
-            {% id page.action %}
+            {% if page.action %}
             <div class="col-4 text-center">
                 <button type="button" class="btn btn-primary btn-lg">Primary</button>
             </div>

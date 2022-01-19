@@ -1,5 +1,5 @@
 # Symphony
-Theme for YAKA GitHub Sites based on Bootstrap 5
+Theme for YAKA GitHub Sites based on Jekyll & Bootstrap 5
 
 ## Installation
 Add this line to your site's `_config.yml`:
