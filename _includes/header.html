@@ -71,14 +71,54 @@
             {% else %}
                 <div>
                     <ul class="navbar-nav">
+                        <!-- Pages -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Pages
                               </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPages">
                                 {% for item in site.pages %}
                                 <li>
-                                    <a class="dropdown-item" href="{{ item.link | absolute_url }}" title="{{ item.name }}">{{item.name}}</a>
+                                    <a class="dropdown-item" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <!-- Posts -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPosts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Posts
+                                </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPosts">
+                                {% for item in site.posts %}
+                                <li>
+                                    <a class="dropdown-item" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <!-- Categories -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                              </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
+                                {% for item in site.categories %}
+                                <li>
+                                    <a class="dropdown-item" href="#" title="{{ item[0] }}">{{ item[0] }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                        <!-- Tags -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTags" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                                </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownTags">
+                                {% for item in site.tags %}
+                                <li>
+                                    <a class="dropdown-item" href="#" title="{{ item[0] }}">{{ item[0] }}</a>
                                 </li>
                                 {% endfor %}
                             </ul>
