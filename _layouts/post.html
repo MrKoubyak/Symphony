@@ -6,18 +6,31 @@ layout: default
 <main class="p-3" aria-label="Content">
     <article class="container">
         <header>
-            <p>
-                {{ page.date | date_to_string }} -   
+            <ul id="" class="nav align-items-center">
                 {% if author %}
-                - <a href="{{ author.url }}">{{ author.name }}</a>
+                <li class="nav-item">
+                    by <a href="{{ author.url }}" class="text-reset btn-link">{{ author.name }}</a>
+                </li>
                 {% endif %}
-            </p>
+                <li class="nav-item">
+                    {{ page.date | date_to_string }}
+                </li>
+                <li class="nav-item">
+                    {% capture words %}
+                    {{ content | number_of_words | minus: 180 }}
+                    {% endcapture %}
+                    {% unless words contains '-' %}
+                    {{ words | plus: 150 | divided_by: 150 | append: ' min read' }}
+                    {% endunless %}
+                </li>
+            </ul>
         </header>
         <section>
             {{ content }}
         </section>
         <footer>
-    
+            {% include share.html %}
+            {% include author.html %}
         </footer>
     </article>
 </main>

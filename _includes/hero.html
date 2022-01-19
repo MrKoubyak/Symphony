@@ -9,7 +9,7 @@
         <img src="{{ page.image | absolute_url }}" alt="{{ page.title | escape }}" class="background">
     </picture>
     {% else %}
-    <span class="bg-secondary"></span>
+    <span class="background placeholder bg-secondary"></span>
     {% endif %}
 
     <div class="container position-absolute top-50 start-50 translate-middle">
@@ -26,7 +26,7 @@
                 </h1>
                 <p class="lead">
                     {% if page.excerpt %}
-                        {{ page.excerpt | escape }}
+                        {{ page.excerpt | strip_html | escape }}
                     {% elsif site.description %}
                         {{ site.description | escape }}
                     {% else %}
