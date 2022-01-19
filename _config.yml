@@ -8,7 +8,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
 
-permalink: none
+permalink: /news/:categories/:year/:month/:day/:title
 
 collections:
   authors:
