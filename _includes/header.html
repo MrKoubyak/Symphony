@@ -54,7 +54,7 @@
                 </div>
                 {% endif %}
                 <hr />
-                {% if site.data.network %}
+            {% if site.data.network %}
                 <!-- Network -->
                 <div id="network">
                     <ul class="navbar-nav">
@@ -68,7 +68,24 @@
                         {% endfor %}
                     </ul>
                 </div>
-                {% endif %}
+            {% elsif %}
+                <div>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Pages
+                              </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                {% for item in site.pages %}
+                                <li>
+                                    <a class="dropdown-item" href="{{ item.link | absolute_url }}" title="{{ item.name }}">{{item.name}}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            {% endif %}
                 <hr />
                 {% if site.data.social %}
                 <!-- Social Network -->
