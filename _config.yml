@@ -35,7 +35,7 @@ defaults:
 
 # Site Information
 title: YAKA Studio
-url: "http://studio.yaka.cloud"
+url: "https://yakagamestudio.github.io/"
 tagline: Game developer unleashed 
 logo: /assets/images/logo.png
 theme: #6f42c1
