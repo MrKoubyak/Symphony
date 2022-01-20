@@ -1,19 +1,21 @@
-<div id="meta">
-    <ul class="nav align-items-center">
+<div id="meta" class="border-bottom py-3 mb-3">
+    <ul class="nav justify-content-end">
         
     {% if author %}
-        <li class="nav-item">
+        <li class="nav-item mx-3 badge bg-secondary">
             by <a href="{{ author.url }}" class="text-reset btn-link">{{ author.name }}</a>
         </li>
     {% endif %}
         
     {% if page.date %}
-        <li class="nav-item">
+        <li class="nav-item mx-3 badge bg-secondary">
+            <i class="far fa-calendar"></i>
             {{ page.date | date_to_string }}
         </li>
     {% endif %}
        
-        <li class="nav-item">
+        <li class="nav-item mx-3 badge bg-secondary">
+            <i class="far fa-clock"></i>
             {% capture words %}
             {{ content | number_of_words | minus: 180 }}
             {% endcapture %}
