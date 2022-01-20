@@ -7,13 +7,18 @@
 {% if categories %}
     <ul id="categories" class="nav">
     {% for category in categories %}
-        <li class="nav-item mx-3 badge bg-primary">{{ category.name }}</li>
+        <li class="nav-item mx-3 badge bg-primary">{{ category | first }}</li>
     {% endfor %}
     </ul>
 {% endif %}
 
 
     <ul class="nav justify-content-end">
+    {% if post %}
+        {% assign author = post.author %}
+    {% else %}
+        {% assign author = page.author %}
+    {% endif %}
     {% if author %}
         <li class="nav-item mx-3 badge bg-secondary">
             by <a href="{{ author.url }}" class="text-reset btn-link">{{ author.name }}</a>
