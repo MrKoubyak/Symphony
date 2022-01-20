@@ -1,0 +1,25 @@
+<div id="meta">
+    <ul class="nav align-items-center">
+        
+    {% if author %}
+        <li class="nav-item">
+            by <a href="{{ author.url }}" class="text-reset btn-link">{{ author.name }}</a>
+        </li>
+    {% endif %}
+        
+    {% if page.date %}
+        <li class="nav-item">
+            {{ page.date | date_to_string }}
+        </li>
+    {% endif %}
+       
+        <li class="nav-item">
+            {% capture words %}
+            {{ content | number_of_words | minus: 180 }}
+            {% endcapture %}
+            {% unless words contains '-' %}
+            {{ words | plus: 150 | divided_by: 150 | append: ' min read' }}
+            {% endunless %}
+        </li>
+    </ul>
+</div>

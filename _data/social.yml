@@ -1,11 +1,14 @@
 - name: Twitter
   link: https://twitter.com/yakagamestudio
+  share: https://twitter.com/share?url=
 - name: Facebook
   link: https://facebook.com/yakagamestudio
+  share: https://www.facebook.com/sharer/sharer.php?u=
 - name: Instagram
   link: https://instagram.com/yakagamestudio
 - name: LinkedIn
   link: https://www.linkedin.com/showcase/yakagamestudio
+  share: https://www.linkedin.com/shareArticle?url=
 - name: Pinterest
   link: https://www.pinterest.fr/YAKAGameStudio
 - name: Twitch

@@ -1,26 +1,21 @@
 <div id="share">
-    <span>Share (for immortality)</span>
+    <span class="display-4">Share (for immortality)</span>
     <div>
-        <a 
-            href="https://www.facebook.com/sharer/sharer.php?u={{page.url}}" 
-            data-network="facebook" 
-            aria-label="Facebook" 
-            rel="noopener">
-            <span class="ct-icon-container"><i class="fab fa-facebook"></i></span>
-        </a>
-        <a 
-            href="https://twitter.com/share?url={{page.url}}" 
-            data-network="twitter" 
-            aria-label="Twitter" 
-            rel="noopener">
-            <span class="ct-icon-container"></span>
-        </a>
-        <a 
-            href="https://www.linkedin.com/shareArticle?url={{page.url}}" 
-            data-network="linkedin" 
-            aria-label="LinkedIn" 
-            rel="noopener">
-            <span class="ct-icon-container"></span>
-        </a>
+        <ul class="nav justify-content-center">
+        {% for item in site.data.social %}
+        {% if item.share %}
+            <li class="nav-item border-bottom border-5 border-primary mx-1">
+                <a 
+                    class="nav-link link-primary" 
+                    href="{{ item.share }}{{page.url | absolute_url }}" 
+                    aria-label="{{item.name}}" 
+                    rel="noopener" 
+                    title="Share {{ page.title }} on {{ item.name | capitalize }}">
+                        <i class="fab fa-{{ item.name | downcase }}"></i>
+                </a>
+            </li>
+        {% endif %}
+        {% endfor %}
+        </ul>
     </div>
 </div>
