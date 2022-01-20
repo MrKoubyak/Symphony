@@ -1,12 +1,24 @@
 <div id="meta" class="border-bottom py-3 mb-3">
+{% if post %}
+    {% assign categories = post.categories %}
+{% else %}
+    {% assign categories = page.categories %}
+{% endif %}
+{% if categories %}
+    <ul id="categories" class="nav">
+    {% for category in categories %}
+        <li class="nav-item mx-3 badge bg-primary">{{ category.name }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+
+
     <ul class="nav justify-content-end">
-        
     {% if author %}
         <li class="nav-item mx-3 badge bg-secondary">
             by <a href="{{ author.url }}" class="text-reset btn-link">{{ author.name }}</a>
         </li>
     {% endif %}
-        
     {% if page.date %}
         <li class="nav-item mx-3 badge bg-secondary">
             <i class="far fa-calendar"></i>
