@@ -7,7 +7,7 @@
 {% if categories %}
     <ul id="categories" class="nav">
     {% for category in categories %}
-        <li class="nav-item mx-3 badge bg-primary">{{ category | first }}</li>
+        <li class="nav-item mx-3 badge bg-primary">{{ category }}</li>
     {% endfor %}
     </ul>
 {% endif %}
