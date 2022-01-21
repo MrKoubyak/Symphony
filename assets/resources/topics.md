@@ -9,7 +9,7 @@ image: /assets/images/illustrations/news.png
 <main class="p-3" aria-label="Content">
     <section class="container">
         <div class="row row-cols-1 row-cols-md-3">
-            {% assign pages = site.pages | where: "layout":"page" %}
+            {% assign pages = site.pages | where: "layout", "page" %}
             {% for page in pages %}
             <div class="col">
                 <div class="card text-dark bg-light h-100">
