@@ -15,7 +15,13 @@ image: /assets/images/illustrations/news.png
                     <img src="{{ post.image | absolute_url }}" class="card-img-top" alt="{{ post.title }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
-                        {% include categories.html %}
+                        {% if post.categories %}
+                            <ul id="categories" class="nav">
+                            {% for category in post.categories %}
+                                <li class="nav-item mx-1 badge bg-primary">{{ category }}</li>
+                            {% endfor %}
+                            </ul>
+                        {% endif %}
                         <h6 class="card-subtitle mb-2 text-muted">{{ post.date }}</h6>
                         <p class="card-text">{{ post.excerpt | truncatewords: 20 }}</p>
                     </div>
