@@ -8,13 +8,13 @@
         <ul class="nav">
         {% if temp.author %}
             <li class="nav-item mx-1 badge bg-secondary">
-                by <a href="{{ author.url }}" class="text-reset btn-link">{{ author }}</a>
+                by <a href="{{ author.url }}" class="text-reset btn-link">{{ temp.author }}</a>
             </li>
         {% endif %}
         {% if temp.date %}
-            <li class="nav-item mx-3 badge bg-secondary">
+            <li class="nav-item mx-1 badge bg-secondary">
                 <i class="far fa-calendar"></i>
-                {{ page.date | date_to_string }}
+                {{ temp.date | date_to_string }}
             </li>
         {% endif %}
         
