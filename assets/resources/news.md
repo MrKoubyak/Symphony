@@ -15,6 +15,7 @@ image: /assets/images/illustrations/news.png
                     <img src="{{ post.image | absolute_url }}" class="card-img-top" alt="{{ post.title }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date_to_string }}</h6>
                         {% if post.categories %}
                             <ul id="categories" class="nav">
                             {% for category in post.categories %}
@@ -22,7 +23,6 @@ image: /assets/images/illustrations/news.png
                             {% endfor %}
                             </ul>
                         {% endif %}
-                        <h6 class="card-subtitle mb-2 text-muted">{{ post.date }}</h6>
                         <p class="card-text">{{ post.excerpt | truncatewords: 20 }}</p>
                     </div>
                     <div class="card-footer text-muted text-end">
