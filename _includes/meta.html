@@ -1,24 +1,24 @@
 <div id="meta" class="border-bottom py-3 mb-3 row">
 {% if post %}
-{% assign temp = post %}
+{% assign meta = post %}
 {% else %}
-{% assign temp = page %}
+{% assign meta = page %}
 {% endif %}
     <div class="col">
         <ul class="nav">
-        {% if temp.author %}
+        {% if meta.author %}
             <li class="nav-item mx-1 badge bg-secondary">
-                by <a href="{{ author.url }}" class="text-reset btn-link">{{ temp.author }}</a>
+                by <a href="#author" class="text-reset btn-link">{{ meta.author }}</a>
             </li>
         {% endif %}
-        {% if temp.date %}
-            <li class="nav-item mx-1 badge bg-secondary">
+        {% if meta.date %}
+            <li id="date" class="nav-item mx-1 badge bg-secondary">
                 <i class="far fa-calendar"></i>
-                {{ temp.date | date_to_string }}
+                {{ meta.date | date_to_string }}
             </li>
         {% endif %}
         
-            <li class="nav-item mx-1 badge bg-secondary">
+            <li id="reading" class="nav-item mx-1 badge bg-secondary">
                 <i class="far fa-clock"></i>
                 {% capture words %}
                 {{ content | number_of_words | minus: 180 }}
@@ -29,10 +29,10 @@
             </li>
         </ul>
     </div>
-    {% if temp.categories %}
+    {% if meta.categories %}
     <div class="col">
         <ul id="categories" class="nav justify-content-end">
-        {% for category in temp.categories %}
+        {% for category in meta.categories %}
             <li class="nav-item mx-3 badge bg-primary">{{ category }}</li>
         {% endfor %}
         </ul>

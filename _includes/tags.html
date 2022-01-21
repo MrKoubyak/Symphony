@@ -1,3 +1,14 @@
 <div id="tag">
-
+{% if post %}
+{% assign meta = post %}
+{% else %}
+{% assign meta = page %}
+{% endif %}
+    {% if meta.tags %}
+        <ul id="tags" class="nav">
+        {% for tag in meta.tags %}
+            <li class="nav-item mx-3">#{{ tag }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
 </div>

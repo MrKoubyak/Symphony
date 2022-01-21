@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <!-- Content -->
 <main class="p-3" aria-label="Content">
     <article class="container">
@@ -10,6 +9,7 @@ layout: default
         </header>
         <section>
             {{ content }}
+            {% include tags.html %}
         </section>
         <footer>
             {% include share.html %}
