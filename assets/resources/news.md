@@ -16,7 +16,7 @@ image: /assets/images/illustrations/news.png
                     <div class="card-body">
                         <h5 class="card-title">{{ post.title }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date_to_string }}</h6>
-                        <p class="card-text">{{ post.excerpt | truncatewords: 20 }}</p>
+                        <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
                     </div>
                     <div class="card-footer text-muted text-end">
                         <a href="{{ post.url | absolute_url }}" class="btn btn-primary" title="Read {{ post.title }}">Read More</a>
