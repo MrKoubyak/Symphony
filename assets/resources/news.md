@@ -1,0 +1,29 @@
+---
+permalink: /news/
+layout: default
+title: News
+excerpt: Information about our World
+image: /assets/images/illustrations/news.png
+---
+<!-- Content -->
+<main class="p-3" aria-label="Content">
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-3">
+            {% for post in site.posts %}
+            <div class="col">
+                <div class="card text-dark bg-light h-100">
+                    <img src="{{ post.image | absolute_url }}" class="card-img-top" alt="{{ post.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">in {{ post.category }}</h6>
+                        <p class="card-text">{{ post.excerpt | truncatewords: 50 }}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        <a href="{{ post.url }}" class="btn btn-primary" title="Read {{ post.title }}">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+</main>
