@@ -17,6 +17,15 @@ image: /assets/images/illustrations/news.png
                         <h5 class="card-title">{{ post.title }}</h5>
                         <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date_to_string }}</h6>
                         <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                        {% if page.categories %}
+                        <div>
+                            <ul id="categories" class="nav">
+                            {% for category in page.categories %}
+                                <li class="nav-item mx-1 badge bg-primary">{{ category }}</li>
+                            {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
                     </div>
                     <div class="card-footer text-muted text-end">
                         <a href="{{ post.url | absolute_url }}" class="btn btn-primary" title="Read {{ post.title }}">Read More</a>
