@@ -8,14 +8,9 @@ image: /assets/images/illustrations/news.png
 <!-- Content -->
 <main class="p-3" aria-label="Content">
     <section class="container">
-    {{ site.pages | jsonify }}
         <div class="row row-cols-1 row-cols-md-3">
             {% assign filteredPages = site.pages | where: "layout", "page" %}
-            {{ filteredPages | inspect }}
-            ANDOTHER
-            {% assign filteredPages2 = site.pages | where_exp: "item", "item.layout == 'page'" %}
-            {{ filteredPages2 | inspect }}
-            {% for page in filteredPages2 %}
+            {% for page in filteredPages %}
             <div class="col">
                 <div class="card text-dark bg-light h-100">
                     <img src="{{ page.image | absolute_url }}" class="card-img-top" alt="{{ page.title }}">
