@@ -1,4 +1,4 @@
 ---
-layout: default
+layout: page
 title:  "Page 2"
 ---
