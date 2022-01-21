@@ -30,6 +30,7 @@ defaults:
       layout: "post"
   - scope:
       path: ""
+      type: "pages"
     values:
       layout: "default"
 
