@@ -1,23 +1,6 @@
 <div id="meta" class="border-bottom py-3 mb-3 row">
-{% if post %}
-{% assign meta = post %}
-{% else %}
-{% assign meta = page %}
-{% endif %}
     <div class="col">
         <ul class="nav">
-        {% if meta.author %}
-            <li class="nav-item mx-1 badge bg-secondary">
-                by <a href="#author" class="text-reset btn-link">{{ meta.author }}</a>
-            </li>
-        {% endif %}
-        {% if meta.date %}
-            <li id="date" class="nav-item mx-1 badge bg-secondary">
-                <i class="far fa-calendar"></i>
-                {{ meta.date | date_to_string }}
-            </li>
-        {% endif %}
-        
             <li id="reading" class="nav-item mx-1 badge bg-secondary">
                 <i class="far fa-clock"></i>
                 {% capture words %}
@@ -27,13 +10,24 @@
                 {{ words | plus: 150 | divided_by: 150 | append: ' min read' }}
                 {% endunless %}
             </li>
+        {% if page.date %}
+            <li id="date" class="nav-item mx-1 badge bg-secondary">
+                <i class="far fa-calendar"></i>
+                {{ page.date | date_to_string }}
+            </li>
+        {% endif %}
+        {% if page.author %}
+            <li class="nav-item mx-1 badge bg-secondary">
+                by <a href="#author" class="text-reset btn-link">{{ page.author }}</a>
+            </li>
+        {% endif %}
         </ul>
     </div>
-    {% if meta.categories %}
+    {% if page.categories %}
     <div class="col">
         <ul id="categories" class="nav justify-content-end">
-        {% for category in meta.categories %}
-            <li class="nav-item mx-3 badge bg-primary">{{ category }}</li>
+        {% for category in page.categories %}
+            <li class="nav-item mx-1 badge bg-primary">{{ category }}</li>
         {% endfor %}
         </ul>
     </div>
