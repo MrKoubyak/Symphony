@@ -4,9 +4,9 @@
 {% else %}
 {% assign meta = page %}
 {% endif %}
-    {% if meta.tags %}
+    {% if page.tags %}
         <ul id="tags" class="nav">
-        {% for tag in meta.tags %}
+        {% for tag in page.tags %}
             <li class="nav-item mx-3">#{{ tag }}</li>
         {% endfor %}
         </ul>

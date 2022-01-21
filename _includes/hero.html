@@ -1,7 +1,7 @@
 <section id="hero" class="position-relative{% if layout.splash or page.splash %} vh-100{% endif %}">
     {% if page.trailer %}
     <video autoplay muted loop poster="{{ page.image | absolute_url }}" class="background">
-        <source src="{{ page.trailer }}" type="video/mp4">
+        <source src="{{ page.trailer | absolute_url }}" type="video/mp4">
     </video>
     {% elsif page.image %}
     <picture>
