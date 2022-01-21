@@ -28,6 +28,8 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      image: /assets/images/illustrations/launch.jpeg
+      author: llefevre
   - scope:
       path: ""
       type: "pages"
