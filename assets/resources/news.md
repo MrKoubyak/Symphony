@@ -1,6 +1,5 @@
 ---
 permalink: /news/
-layout: default
 title: News
 excerpt: Information about our World
 image: /assets/images/illustrations/news.png
