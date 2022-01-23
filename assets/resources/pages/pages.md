@@ -1,8 +1,7 @@
 ---
-permalink: /topics/
-layout: default
-title: Topics
-excerpt: Our Publications
+permalink: /articles/
+title: Articles
+excerpt: All our articles
 image: /assets/images/illustrations/news.png
 ---
 <!-- Content -->

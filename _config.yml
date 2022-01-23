@@ -1,14 +1,56 @@
-# Files excluded
-exclude:
-  - readme.md
+# Welcome to Symphony!
+#
+# Is is a bootsrap theme for Jekyll engine
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that.
 
-# Jekyl plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-
+# Site settings
+title: YAKA Studio
+url: "https://yakagamestudio.github.io"
 permalink: /news/:categories/:year/:month/:day/:title
+tagline: Game developer unleashed 
+logo: /assets/images/logo.png
+theme: "#6f42c1"
+description: > 
+  We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences.
+
+# Author settings
+author:
+  name: YAKA Game Studio
+  email: contact@yaka.games
+  website: https://yaka.games
+
+language: "en-us"
+
+twitter:
+  username: yakagamestudio
+  card: summary
+
+facebook:
+  app_id:
+  publisher: https://facebook.com/yakagamestudio
+  admins: 
+
+
+# Social Network
+social:
+- name: Twitter
+  link: https://twitter.com/yakagamestudio
+  share: https://twitter.com/share?url=
+- name: Facebook
+  link: https://facebook.com/yakagamestudio
+  share: https://www.facebook.com/sharer/sharer.php?u=
+- name: Instagram
+  link: https://instagram.com/yakagamestudio
+- name: LinkedIn
+  link: https://www.linkedin.com/showcase/yakagamestudio
+  share: https://www.linkedin.com/shareArticle?url=
+- name: Pinterest
+  link: https://www.pinterest.fr/YAKAGameStudio
+- name: Twitch
+  link: https://www.twitch.tv/yakagamestudio
+- name: Youtube
+  link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
 
 collections:
   authors:
@@ -36,24 +78,15 @@ defaults:
     values:
       layout: "default"
 
-# Site Information
-title: YAKA Studio
-url: "https://yakagamestudio.github.io"
-tagline: Game developer unleashed 
-logo: /assets/images/logo.png
-theme: #6f42c1
-description: > 
-  We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences.
-author:
-  name: YAKA Game Studio
-  email: contact@yaka.games
-  website: https://yaka.games
+# Files excluded
+exclude:
+  - readme.md
 
-twitter:
-  username: yakagamestudio
-  card: summary
+# Build settings
+# markdown: kramdown
 
-facebook:
-  app_id:
-  publisher: https://facebook.com/yakagamestudio
-  admins: 
+# Jekyl plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
