@@ -10,7 +10,9 @@ url: "https://yakagamestudio.github.io"
 permalink: /news/:categories/:year/:month/:day/:title
 tagline: Game developer unleashed 
 logo: /assets/images/logo.png
-theme: "#6f42c1"
+theme: 
+  primary: "#6f42c1"
+  secondary: "#000000"
 description: > 
   We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences.
 
