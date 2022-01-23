@@ -10,10 +10,8 @@ image: /assets/images/illustrations/news.png
     {% for tag in site.tags %}
         <h3>{{ tag | first | capitalize }}</h3>
         <div class="row row-cols-1 row-cols-md-3">
-            {% for page in tag.last %}
-            <div class="col">
-                {% include /snippets/card.html %}
-            </div>
+            {% for item in tag.last %}
+            {% include /snippets/card.html %}
             {% endfor %}
         </div>
     {% endfor %}

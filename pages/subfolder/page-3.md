@@ -6,12 +6,12 @@ author: llefevre
 image: /assets/images/illustrations/launch.jpeg
 trailer: /assets/videos/3851147.mp4
 categories: 
-    - Trends
-    - XBOX
+    - Category-1
+    - Category-3
 tags: 
-    - acquisition
-    - innovation
-    - games
+    - tag-1
+    - tag-4
+    - tag-5
 ---
 ## Title 2
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas elementum ligula, vel accumsan nulla hendrerit a. Duis viverra at ante pharetra lacinia. Maecenas feugiat arcu felis, id ultricies dolor vehicula eget. Cras quis felis urna. Suspendisse id vestibulum orci. Nulla facilisi. Fusce convallis ut turpis bibendum eleifend.

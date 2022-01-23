@@ -6,7 +6,7 @@
     {% elsif page.image %}
     <picture>
         <source srcset="{{ page.image | absolute_url }}">
-        <img src="{{ page.image | absolute_url }}" alt="{{ page.title | escape }}" class="background">
+        <img src="{{ page.image | | prepend: '/assets/images/' | absolute_url }}" alt="{{ page.title | escape }}" class="background">
     </picture>
     {% else %}
     <span class="background placeholder bg-secondary"></span>
