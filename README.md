@@ -19,6 +19,7 @@ Refers to files within the `_layouts` directory, that define the markup for your
   - `home.html` : The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
   - `page.html` : The layout for your documents that contain FrontMatter, but are not posts.
   - `post.html` : The layout for your posts.
+  - `category.html` : The layout for pages used as categories
 
 ### Home Layout
 
