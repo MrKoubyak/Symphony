@@ -3,8 +3,8 @@ layout: page
 title:  "Page 3"
 excerpt: My dummy page with lot of content
 author: llefevre
-image: /assets/images/illustrations/launch.jpeg
-trailer: /assets/videos/3851147.mp4
+image: illustrations/launch.jpeg
+trailer: 3851147.mp4
 categories: 
     - Category-1
     - Category-3

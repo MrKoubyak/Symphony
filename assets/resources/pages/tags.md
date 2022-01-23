@@ -2,7 +2,7 @@
 permalink: /tags/
 title: Tags
 excerpt: Browse content by Tag
-image: /assets/images/illustrations/news.png
+image: illustrations/news.png
 ---
 <!-- Content -->
 <main class="p-3" aria-label="Content">

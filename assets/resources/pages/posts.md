@@ -2,7 +2,7 @@
 permalink: /news/
 title: News
 excerpt: Information about our World
-image: /assets/images/illustrations/news.png
+image: illustrations/news.png
 ---
 <!-- Content -->
 <main class="p-3" aria-label="Content">

@@ -1,4 +1,4 @@
 ---
 layout: home
-image: /assets/images/illustrations/discover.png
+image: illustrations/discover.png
 ---

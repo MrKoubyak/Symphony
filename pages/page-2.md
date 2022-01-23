@@ -3,7 +3,7 @@ layout: page
 title:  "Page 2"
 excerpt: My dummy post
 author: llefevre
-image: /assets/images/illustrations/launch.jpeg
+image: illustrations/launch.jpeg
 categories: Category-1
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas elementum ligula, vel accumsan nulla hendrerit a. Duis viverra at ante pharetra lacinia. Maecenas feugiat arcu felis, id ultricies dolor vehicula eget. Cras quis felis urna. Suspendisse id vestibulum orci. Nulla facilisi. Fusce convallis ut turpis bibendum eleifend.
