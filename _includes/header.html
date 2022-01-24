@@ -41,7 +41,7 @@
                 <!-- Site -->
                 <div id="sitemap" class="me-auto">
                     <ul class="navbar-nav nav-pills">
-                        {% for item in site.data.navigation %}
+                        {% for item in site.data.header %}
                         <li class="nav-item">
                             <a class="nav-link{% if page.url == item.link %} active{% endif %} px-3" 
                             {% if page.url == item.link %}aria-current="page"{% endif %} 
