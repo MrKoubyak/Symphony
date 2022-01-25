@@ -26,8 +26,8 @@ author:
 settings:
   language: "en-us"
   resources:
-    image: /assets/images
-    video: /assets/video
+    images: /assets/images/illustrations/
+    videos: /assets/videos/
   theme:
     color: 
       primary: "#6f42c1"
