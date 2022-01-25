@@ -49,7 +49,7 @@
                 </div>
                 <hr />
                 {% endfor %}
-            {% elseif %}
+            {% else %}
                 <ul class="navbar-nav">
                 {% assign items = site.pages | where: "title" %}
                 {% for item in items %}
