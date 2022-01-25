@@ -29,8 +29,8 @@
 
             <!-- Navigation -->
             <div id="navbarContent" class="collapse navbar-collapse p-2 pt-5 p-lg-0">
-                {% assign menus = site.data.navigation | where: "location", "header" %}
-                {% if menus %}
+            {% assign menus = site.data.navigation | where: "location", "header" %}
+            {% if menus %}
                 {% for menu in menus %}
                 <!-- Site -->
                 <div id="{{ menu.title | slugify }}" class="me-auto">
@@ -39,89 +39,27 @@
                         <li class="nav-item">
                             <a class="nav-link{% if page.url == item.link %} active{% endif %} px-3" 
                             {% if page.url == item.link %}aria-current="page"{% endif %} 
-                            href="{{ item.link | absolute_url }}">
+                            href="{{ item.link | absolute_url }}" title="{{ item.name }}">
+                            {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
                                 {{ item.name | escape }}
                             </a>
                         </li>
                         {% endfor %}
                     </ul>
                 </div>
+                <hr />
                 {% endfor %}
-                {% endif %}
+            {% elseif %}
+                <ul class="navbar-nav">
+                {% assign items = site.pages | where: "title" %}
+                {% for item in items %}
+                    <li>
+                        <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
+                    </li>
+                {% endfor %}
+                </ul>
                 <hr />
-            {% if site.data.network %}
-                <!-- Network -->
-                <div id="network">
-                    <ul class="navbar-nav">
-                        {% for item in site.data.network %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ item.link | absolute_url }}" title="{{ item.name }}">
-                                {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
-                                {{item.name}}
-                            </a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            {% else %}
-                <div>
-                    <ul class="navbar-nav">
-                        <!-- Pages -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Pages
-                              </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPages">
-                                {% for item in site.pages %}
-                                <li>
-                                    <a class="dropdown-item" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <!-- Posts -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPosts" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Posts
-                                </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownPosts">
-                                {% for item in site.posts %}
-                                <li>
-                                    <a class="dropdown-item" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <!-- Categories -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCategories" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Categories
-                              </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownCategories">
-                                {% for item in site.categories %}
-                                <li>
-                                    <a class="dropdown-item" href="#" title="{{ item[0] }}">{{ item[0] }}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                        <!-- Tags -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTags" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Tags
-                                </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownTags">
-                                {% for item in site.tags %}
-                                <li>
-                                    <a class="dropdown-item" href="#" title="{{ item[0] }}">{{ item[0] }}</a>
-                                </li>
-                                {% endfor %}
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
             {% endif %}
-                <hr />
                 {% if site.data.social %}
                 <!-- Social Network -->
                 <div class="d-lg-none">
