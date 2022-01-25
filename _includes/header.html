@@ -31,7 +31,7 @@
             <div id="navbarContent" class="collapse navbar-collapse p-2 pt-5 p-lg-0">
                 {% assign menus = site.data.navigation | where "location", "header" %}
                 {% if menus %}
-                {% foreach menu in menus %}
+                {% for menu in menus %}
                 <!-- Site -->
                 <div id="{{menu.title}}" class="me-auto">
                     <ul class="navbar-nav nav-pills">
