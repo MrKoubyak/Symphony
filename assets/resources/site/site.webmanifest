@@ -18,6 +18,6 @@ permalink: /site.webmanifest
     }
   ],
   "theme_color": "{{ site.settings.theme.color.primary }}",
-  "background_color": "#ffffff",
+  "background_color": "none",
   "display": "standalone"
 }
