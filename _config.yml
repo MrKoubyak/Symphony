@@ -12,7 +12,7 @@ title: Symphony
 url: "https://yakagamestudio.github.io"
 permalink: /news/:categories/:year/:month/:day/:title
 tagline: Game developer unleashed 
-logo: /assets/images/logo.png
+logo: /assets/logo.png
 description: > 
   We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences.
 
@@ -26,7 +26,7 @@ author:
 settings:
   language: "en-us"
   resources:
-    images: /assets/images/illustrations/
+    images: /assets/images/
     videos: /assets/videos/
   theme:
     color: 
@@ -34,40 +34,68 @@ settings:
       secondary: "#000000"
     font:
 
-# Theme Settings
-
-
-twitter:
-  username: yakagamestudio
-  card: summary
-
-facebook:
-  app_id:
-  publisher: https://facebook.com/yakagamestudio
-  admins: 
+# Navigation
+menus:
+  - title: Home Menu
+    location: header
+    position: left
+    links:
+    - name: Home
+      link: /
+    - name: News
+      link: /news/
+  - title: Network
+    location: header
+    links:
+    - name: Studio
+      link: https://yaka.studio
+    - name: Play
+      link: https://yaka.studio
+      icon: 
+  - title: Footer Menu 1
+    location: footer
+    links:
+    - name: Link 1
+      link: /news/
+    - name: Link 2
+      link: /news/
+    - name: Link 3
+      link: https://yaka.studio
+  - title: Footer Menu 2
+    location: footer
+    links:
+    - name: Link 1
+      link: /news/
+    - name: Link 2
+      link: /news/
+    - name: Link 3
+      link: https://yaka.studio
 
 
 # Social Network
 social:
-  twitter:
+  - name: Twitter
+    link: https://twitter.com/yakagamestudio
+    share: https://twitter.com/share?url=
     username: yakagamestudio
     image: image-twitter.png
     card: summary
-    link: https://twitter.com/yakagamestudio
-    share: https://twitter.com/share?url=
-  facebook:
+  - name: Facebook
     link: https://facebook.com/yakagamestudio
     share: https://www.facebook.com/sharer/sharer.php?u=
-  instagram:
+    app_id:
+    publisher: https://facebook.com/yakagamestudio
+    admins: 
+  - name: Instagram
     link: https://instagram.com/yakagamestudio
-  linkedin:
+  - name: LinkedIn
     link: https://www.linkedin.com/showcase/yakagamestudio
     share: https://www.linkedin.com/shareArticle?url=
-  pinterest:
+  - name: Pinterest
     link: https://www.pinterest.fr/YAKAGameStudio
-  twitch:
+  - name: Twitch
     link: https://www.twitch.tv/yakagamestudio
-  youtube:
+  - name: Youtube
     link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
 
 collections:
@@ -80,15 +108,10 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "games"
-    values:
-      layout: "game"
-  - scope:
-      path: ""
       type: "posts"
     values:
       layout: "post"
-      image: illustrations/launch.jpeg
+      image: launch.jpeg
       author: llefevre
   - scope:
       path: ""
