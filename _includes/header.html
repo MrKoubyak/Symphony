@@ -29,7 +29,7 @@
 
             <!-- Navigation -->
             <div id="navbarContent" class="collapse navbar-collapse p-2 pt-5 p-lg-0">
-                {% assign menus = site.data.navigation | where "location", "header" %}
+                {% assign menus = site.data.navigation | where: "location", "header" %}
                 {% if menus %}
                 {% for menu in menus %}
                 <!-- Site -->
