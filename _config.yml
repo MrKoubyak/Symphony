@@ -3,16 +3,16 @@
 # Is is a bootsrap theme for Jekyll engine
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that.
+# Others settings are in /_settings/
 
-# Site settings
-title: YAKA Studio
+#
+# Site Information
+#
+title: Symphony
 url: "https://yakagamestudio.github.io"
 permalink: /news/:categories/:year/:month/:day/:title
 tagline: Game developer unleashed 
 logo: /assets/images/logo.png
-theme: 
-  primary: "#6f42c1"
-  secondary: "#000000"
 description: > 
   We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences.
 
@@ -22,7 +22,12 @@ author:
   email: contact@yaka.games
   website: https://yaka.games
 
-language: "en-us"
+# Site Settings
+settings:
+  language: "en-us"
+  resources:
+    image: /assets/images
+    video: /assets/video
 
 twitter:
   username: yakagamestudio
@@ -36,23 +41,26 @@ facebook:
 
 # Social Network
 social:
-- name: Twitter
-  link: https://twitter.com/yakagamestudio
-  share: https://twitter.com/share?url=
-- name: Facebook
-  link: https://facebook.com/yakagamestudio
-  share: https://www.facebook.com/sharer/sharer.php?u=
-- name: Instagram
-  link: https://instagram.com/yakagamestudio
-- name: LinkedIn
-  link: https://www.linkedin.com/showcase/yakagamestudio
-  share: https://www.linkedin.com/shareArticle?url=
-- name: Pinterest
-  link: https://www.pinterest.fr/YAKAGameStudio
-- name: Twitch
-  link: https://www.twitch.tv/yakagamestudio
-- name: Youtube
-  link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
+  twitter:
+    username: yakagamestudio
+    image: image-twitter.png
+    card: summary
+    link: https://twitter.com/yakagamestudio
+    share: https://twitter.com/share?url=
+  facebook:
+    link: https://facebook.com/yakagamestudio
+    share: https://www.facebook.com/sharer/sharer.php?u=
+  instagram:
+    link: https://instagram.com/yakagamestudio
+  linkedin:
+    link: https://www.linkedin.com/showcase/yakagamestudio
+    share: https://www.linkedin.com/shareArticle?url=
+  pinterest:
+    link: https://www.pinterest.fr/YAKAGameStudio
+  twitch:
+    link: https://www.twitch.tv/yakagamestudio
+  youtube:
+    link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
 
 collections:
   authors:
@@ -88,7 +96,3 @@ exclude:
 # markdown: kramdown
 
 # Jekyl plugins
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed

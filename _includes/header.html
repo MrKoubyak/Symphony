@@ -1,25 +1,17 @@
 <header id="header">
     <!-- Social Network -->
     <span class="d-lg-none spacer">&nbsp;</span>
-    <div id="NavTop" class="d-none d-lg-block">
-        {% if site.data.social %}
-        <ul class="nav justify-content-end">
-            {% for item in site.data.social %}
-            <li class="nav-item">
-                <a class="nav-link" href="{{ item.link }}" title="Follow us on {{ item.name | capitalize }}"><i class="fab fa-{{ item.name | downcase }}"></i></a>
-            </li>
-            {% endfor %}
-        </ul>
-        {% endif %}
+    <div id="header-top" class="d-none d-lg-block">
+        {% include snippets/social.html %}
     </div>
 
     <!-- Site Menu -->
-    <nav id="NavMain" class="navbar navbar-expand-lg navbar-light">
+    <nav id="header-main" class="navbar navbar-expand-lg navbar-light">
         <div class="container border rounded bg-white p-2 shadow">
             <!-- Logo -->
             <div id="logo" class="border rounded bg-white shadow">
                 <a href="{{ site.url }}" title="{{ site.title | escape }}">
-                    <img src="{{ "/assets/images/logo.png" | absolute_url }}" width="100" alt="{{ site.title | escape }}">
+                    <img src="{{ site.logo | absolute_url }}" width="100" alt="{{ site.title | escape }}">
                 </a>
             </div>
 
@@ -37,11 +29,13 @@
 
             <!-- Navigation -->
             <div id="navbarContent" class="collapse navbar-collapse p-2 pt-5 p-lg-0">
-                {% if site.data.navigation %}
+                {% assign menus = site.data.navigation | where "location", "header" %}
+                {% if menus %}
+                {% foreach menu in menus %}
                 <!-- Site -->
-                <div id="sitemap" class="me-auto">
+                <div id="{{menu.title}}" class="me-auto">
                     <ul class="navbar-nav nav-pills">
-                        {% for item in site.data.header %}
+                        {% for item in menu.links %}
                         <li class="nav-item">
                             <a class="nav-link{% if page.url == item.link %} active{% endif %} px-3" 
                             {% if page.url == item.link %}aria-current="page"{% endif %} 
@@ -52,6 +46,7 @@
                         {% endfor %}
                     </ul>
                 </div>
+                {% endfor %}
                 {% endif %}
                 <hr />
             {% if site.data.network %}
