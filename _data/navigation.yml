@@ -1,5 +1,6 @@
 - title: Home Menu
   location: header
+  position: left
   links:
   - name: Home
     link: /

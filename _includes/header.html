@@ -33,7 +33,7 @@
             {% if menus %}
                 {% for menu in menus %}
                 <!-- Site -->
-                <div id="{{ menu.title | slugify }}" class="me-auto">
+                <div id="{{ menu.title | slugify }}" {% if menu.position == "left" %}class="me-auto"{% endif %}>
                     <ul class="navbar-nav nav-pills">
                         {% for item in menu.links %}
                         <li class="nav-item">

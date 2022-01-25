@@ -18,7 +18,8 @@
             </div>
             {% endif %}
             <!-- Links -->
-            {% for menu in site.data.footer %}
+            {% assign menus = site.data.navigation | where: "location", "footer" %}
+            {% for menu in menus %}
             <div id="{{ menu.title | slugify }}" class="col-lg-3 col-sm-6">
                 <h2 class="h5">{{ menu.title }}</h2>
                 <div>
