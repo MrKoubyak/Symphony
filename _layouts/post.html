@@ -1,19 +1,16 @@
 ---
 layout: default
 ---
-<!-- Content -->
-<main class="p-3" aria-label="Content">
-    <article class="container">
-        <header>
-            {% include meta.html %}
-        </header>
-        <section>
-            {{ content }}
-            {% include tags.html %}
-        </section>
-        <footer>
-            {% include share.html %}
-            {% include author.html %}
-        </footer>
-    </article>
-</main>
+<article class="p-3">
+    <header>
+        {% include meta.html %}
+    </header>
+    <section>
+        {{ content }}
+        {% include tags.html %}
+    </section>
+    <footer>
+        {% include share.html %}
+        {% include author.html %}
+    </footer>
+</article>
