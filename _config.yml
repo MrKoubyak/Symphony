@@ -28,6 +28,14 @@ settings:
   resources:
     image: /assets/images
     video: /assets/video
+  theme:
+    color: 
+      primary: "#6f42c1"
+      secondary: "#000000"
+    font:
+
+# Theme Settings
+
 
 twitter:
   username: yakagamestudio
