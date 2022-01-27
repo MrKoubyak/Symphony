@@ -51,7 +51,7 @@
                 {% endfor %}
             {% else %}
                 <ul class="navbar-nav">
-                {% assign items = site.pages | where: "layout", "page" %}
+                {% assign items = site.pages | where: "layout", "page or home" %}
                 {% for item in items %}
                     <li>
                         <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
