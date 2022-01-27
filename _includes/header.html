@@ -51,11 +51,13 @@
                 {% endfor %}
             {% else %}
                 <ul class="navbar-nav">
-                {% assign items = site.pages | where_exp: "item", "layout != null" %}
+                {% assign items = site.pages %}
                 {% for item in items %}
+                {% if item.title %}
                     <li>
                         <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
                     </li>
+                {% endif %}
                 {% endfor %}
                 </ul>
                 <hr />
