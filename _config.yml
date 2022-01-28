@@ -24,7 +24,8 @@ author:
 
 # Site Settings
 settings:
-  language: "en-us"
+  language: "en"
+  locale: "en_US"
   resources:
     images: /assets/images/
     videos: /assets/videos/
@@ -33,6 +34,14 @@ settings:
       primary: "#6f42c1"
       secondary: "#000000"
     font:
+  webmaster:
+    google:
+    bing:
+    alexa:
+    yandex:
+    baidu:
+    facebook:
+
 
 # Navigation
 menus:
@@ -83,9 +92,6 @@ social:
   - name: Facebook
     link: https://facebook.com/yakagamestudio
     share: https://www.facebook.com/sharer/sharer.php?u=
-    app_id:
-    publisher: https://facebook.com/yakagamestudio
-    admins: 
   - name: Instagram
     link: https://instagram.com/yakagamestudio
   - name: LinkedIn

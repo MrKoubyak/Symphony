@@ -1,6 +1,6 @@
-{% if site.data.social %}
+{% if site.social %}
 <ul class="nav justify-content-end">
-    {% for item in site.data.social %}
+    {% for item in site.social %}
     <li class="nav-item">
         <a class="nav-link" href="{{ item.link }}" title="Follow us on {{ item.name | capitalize }}"><i class="fab fa-{{ item.name | downcase }}"></i></a>
     </li>
