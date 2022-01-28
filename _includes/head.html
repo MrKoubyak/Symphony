@@ -1,5 +1,5 @@
-{% assign facebook = site.social %}
-{% assign twitter = site.social | where: "name", "twitter" %}
+{% assign facebook = site.social | where: "name", "Facebook" %}
+{% assign twitter = site.social | where: "name", "Twitter" %}
 {% assign webmaster = site.settings.webmaster %}
 {% assign description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
 
@@ -118,7 +118,7 @@
     }
     </script>
     <script type="application/ld+json">
-    {{ site.social | jsonify }}
+    {{ facebook | jsonify }}
     </script>
 
 
