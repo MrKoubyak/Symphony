@@ -24,7 +24,7 @@ author:
 
 # Site Settings
 settings:
-  language: "en"
+  language: fr
   locale: "en_US"
   resources:
     images: /assets/images/
