@@ -109,9 +109,16 @@
     <meta name="twitter:card" content="summary" />
 {% endif %}
 
-
 <script type="application/ld+json">
-  {{ facebook | jsonify }}
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.logo }}"
+    }
+    </script>
+<script type="application/ld+json">
+  {{ site.social | jsonify }}
 </script>
 
 
