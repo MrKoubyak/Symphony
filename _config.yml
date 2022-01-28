@@ -33,6 +33,7 @@ settings:
     color: 
       primary: "#6f42c1"
       secondary: "#000000"
+      background:
     font:
   webmaster:
     google:
