@@ -93,8 +93,8 @@
 
 {% assign image = page.image %}
 {% if image %}
-    <meta property="og:image" content="{{ image }}" />
-    <meta property="twitter:image" content="{{ image }}" />
+    <meta property="og:image" content="{{ page.image | prepend: site.settings.resources.images | absolute_url }}" />
+    <meta property="twitter:image" content="{{ page.image | prepend: site.settings.resources.images | absolute_url }}" />
     <meta name="twitter:card" content="{{ page.twitter.card | default: twitter.card | default: "summary_large_image" }}" />
     {% if image.height %}
     <meta property="og:image:height" content="{{ image.height }}" />
