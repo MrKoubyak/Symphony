@@ -1,14 +1,14 @@
 <footer id="footer" class="bg-light border-top text-muted pt-3">
     <div class="container">
         <div class="row">
-            {% if site.data.social %}
+            {% if site.social %}
             <!-- Social Media -->
             <div id="social" class="col-sm-12 col-lg-6">
                 <h2 class="h5">Let's Connect</h2>
                 <p>Follow us on your favorite platform</p>
                 <div>
                     <ul class="nav pb-3">
-                        {% for item in site.data.social %}
+                        {% for item in site.social %}
                         <li class="nav-item">
                             <a class="nav-link" href="{{ item.link }}" title="Follow us on {{ item.name | capitalize }}"><i class="fab fa-{{ item.name | downcase }}"></i></a>
                         </li>
@@ -18,7 +18,7 @@
             </div>
             {% endif %}
             <!-- Links -->
-            {% assign menus = site.data.navigation | where: "location", "footer" %}
+            {% assign menus = site.menu | where: "location", "footer" %}
             {% for menu in menus %}
             <div id="{{ menu.title | slugify }}" class="col-lg-3 col-sm-6">
                 <h2 class="h5">{{ menu.title }}</h2>
