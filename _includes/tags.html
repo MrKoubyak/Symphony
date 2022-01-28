@@ -1,9 +1,11 @@
-<div id="tag">
 {% if page.tags %}
-    <ul id="tags" class="nav">
+<div id="tags">
+    <ul class="nav">
     {% for tag in page.tags %}
-        <li class="nav-item mx-1">#{{ tag }}</li>
+        <li class="nav-item mx-1">
+            <a href="{{ "/topic#" | append: tag | absolute_url }}" title="{{ tag }}">{{ tag | | prepend: '#' }}</a>
+        </li>
     {% endfor %}
     </ul>
-{% endif %}
 </div>
+{% endif %}

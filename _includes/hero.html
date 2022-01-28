@@ -1,14 +1,14 @@
 <section id="hero" class="position-relative{% if layout.splash or page.splash %} vh-100{% endif %}">
-    {% if page.trailer %}
+{% if page.trailer %}
     <video autoplay muted loop poster="{{ page.image | prepend: site.settings.resources.images | absolute_url }}" class="background">
         <source src="{{ page.trailer | prepend: site.settings.resources.videos | absolute_url }}" type="video/mp4">
     </video>
-    {% elsif page.image %}
+{% elsif page.image %}
     <picture>
         <source srcset="{{ page.image | prepend: site.settings.resources.images | absolute_url }}">
         <img src="{{ page.image | prepend: site.settings.resources.images | absolute_url }}" alt="{{ page.title | escape }}" class="background">
     </picture>
-    {% else %}
+{% else %}
     <span class="background placeholder bg-secondary"></span>
     {% endif %}
 

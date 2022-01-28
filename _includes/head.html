@@ -1,7 +1,7 @@
 {% assign facebook = site.social | where: "name", "Facebook" %}
 {% assign twitter = site.social | where: "name", "Twitter" %}
 {% assign webmaster = site.settings.webmaster %}
-{% assign description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
+
 
 <meta charset="utf-8">
 <meta name="viewport"
@@ -13,6 +13,7 @@
 <meta property="twitter:title" content="{{ page.title | default: site.title }}" />
 <meta property="og:site_name" content="{{ site.title }}">
 
+{% assign description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
 <meta name="description" content="{{ description }}">
 <meta property="og:description" content="{{ description }}" />
 
