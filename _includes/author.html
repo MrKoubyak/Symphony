@@ -1,22 +1,19 @@
 {% assign authors = item.author %}
 {% assign directory = site.authors %}
-{{ directory | inspect }}
 {%- if authors -%}
     {%- if include.format == "list" -%}
     <ul>
         {%- for author in authors -%}
-        {{ authors | inspect }}
         <li class="nav-item mx-1 badge bg-secondary">
-            by <a href="{{ directory[author].url | default: "#" }}" class="text-reset btn-link">{{ directory[author].name }}</a>
+            by <a href="{{ directory[author].url | default: "#author" }}" class="text-reset btn-link">{{ directory[author].name }}</a>
         </li>
         {%- endfor -%}
     </ul>
     {%- else -%}
     {% assign author = authors | first %}
     <div id="author">
+        <h5>{{ directory[author].name }}</h5>
         {{ directory[author].content }}
-        ---
-        {{ directory[author]}}
     </div>
     {%- endif -%}
 {%- endif -%}
