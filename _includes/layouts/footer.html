@@ -7,13 +7,7 @@
                 <h2 class="h5">Let's Connect</h2>
                 <p>Follow us on your favorite platform</p>
                 <div>
-                    <ul class="nav pb-3">
-                        {% for item in site.social %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ item.link }}" title="Follow us on {{ item.name | capitalize }}"><i class="fab fa-{{ item.name | downcase }}"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                    {% include snippets/social.html, class: "nav pb-3" %}
                 </div>
             </div>
             {% endif %}

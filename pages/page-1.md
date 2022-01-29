@@ -11,16 +11,3 @@ Suspendisse vel tellus efficitur, placerat quam ullamcorper, congue velit. Nulla
 Integer iaculis sed erat vel rutrum. Nunc a elementum ante, vitae hendrerit est. Nulla gravida, enim non eleifend tempus, enim velit dictum diam, id pellentesque sapien orci eget dolor. Vivamus id tortor sit amet odio semper venenatis a et leo. Phasellus lobortis orci facilisis nulla venenatis, et semper ex interdum. Cras ut semper tellus. Praesent in ullamcorper felis. Curabitur sagittis quam eget commodo commodo. Vivamus sit amet mollis quam. Nulla ac erat congue, convallis dolor auctor, hendrerit enim. Pellentesque maximus luctus neque vitae eleifend.
 
 Vestibulum et augue a massa ornare accumsan eu iaculis lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla sollicitudin, risus at pellentesque tempor, enim risus condimentum mauris, vitae malesuada lectus elit a sem. Proin at fermentum leo. Aliquam erat volutpat. Nam vel maximus dolor. Curabitur at luctus magna. Curabitur consequat, urna iaculis fringilla laoreet, eros lacus dapibus enim, at luctus urna risus nec erat. Etiam sit amet tincidunt nisi.
-
-{% if site.settings.social %}
-<div id="social-media">
-    {% assign sm = site.settings.social %}
-    {% for entry in sm %}
-        {% assign key = entry | first %}
-        print KEY : {{key}}
-        {% if sm[key].id %}
-            <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><i class="fa {{ sm[key].fa-icon }}"></i></a>
-        {% endif %}
-    {% endfor %}
-</div>
-{% endif %}
