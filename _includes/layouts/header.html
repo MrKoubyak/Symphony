@@ -58,9 +58,9 @@
                 {%- assign paths = site.pages | map: "path" -%}
                 {%- for path in paths -%}
                 {%- assign item = site.pages | where: "path", path | first -%}
-                {%- if item.title and item.dir != "/" -%}
+                {%- if item.title and item.path contain "/assets/resources/pages" -%}
                     <li>
-                        <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}} in dir {{ item.dir }} and path {{ item.path }}</a>
+                        <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
                     </li>
                 {%- endif -%}
                 {%- endfor -%}
