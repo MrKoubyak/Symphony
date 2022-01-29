@@ -1,7 +1,6 @@
 {%- assign social = site.settings.social -%}
-{%- assign class = "nav" -%}
 {%- if social -%}
-<ul class="{{class}}">
+<ul class="{{include.class | default: "nav" }}">
     {%- for item in social -%}
     {%- assign key = item | first -%}
     {% if social[key].link %}
