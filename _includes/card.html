@@ -4,7 +4,7 @@
         <div class="card-body">
             <h5 class="card-title">{{ item.title }}</h5>
             <h6 class="card-subtitle mb-2 text-muted">{{ item.date | date_to_string }}</h6>
-            {% include "include category.html" %}
+            {% include category.html %}
             <p class="card-text">{{ item.excerpt | strip_html | truncatewords: 20 }}</p>
         </div>
         <div class="card-footer text-muted text-end">

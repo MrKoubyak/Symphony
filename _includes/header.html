@@ -1,10 +1,11 @@
-{% assign menus = site.settings.menus | where: "location", "header" %}
+{%- assign menus = site.settings.menus | where: "location", "header" -%}
+{%- assign social = site.settings.social -%}
 
 <header id="header">
     <div id="header-top">
         <div class="d-lg-none spacer">&nbsp;</div>
         <div class="d-none d-lg-block">
-        {%- if site.settings.social -%}
+        {%- if social -%}
         <!-- Social Network -->
         {% include social.html class="nav justify-content-end" %}
         {%- endif -%}
@@ -72,7 +73,7 @@
                 </ul>
                 <hr />
             {% endif %}
-            {%- if site.settings.social -%}
+            {%- if social -%}
                 <!-- Social Network -->
                 <div class="d-lg-none">
                     <h4>Follow us</h4>
