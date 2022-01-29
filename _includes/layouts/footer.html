@@ -1,7 +1,10 @@
+{%- assign menus = site.settings.menus | where: "location", "footer" -%}
+{%- assign social = site.settings.social -%}
 <footer id="footer" class="bg-light border-top text-muted pt-3">
-    <div class="container">
-        <div class="row">
-            {% if site.settings.social %}
+    <div  class="container">
+        <div id="footer-top"></div>
+        <div id="footer-main" class="row">
+            {% if social %}
             <!-- Social Media -->
             <div id="social" class="col-sm-12 col-lg-6">
                 <h2 class="h5">Let's Connect</h2>
@@ -11,9 +14,9 @@
                 </div>
             </div>
             {% endif %}
+            {%- if menu -%}
             <!-- Links -->
-            {% assign menus = site.menu | where: "location", "footer" %}
-            {% for menu in menus %}
+            {%- for menu in menus -%}
             <div id="{{ menu.title | slugify }}" class="col-lg-3 col-sm-6">
                 <h2 class="h5">{{ menu.title }}</h2>
                 <div>
@@ -26,17 +29,17 @@
                     </ul>
                 </div>
             </div>
-            {% endfor %}
+            {%- endfor -%}
+            {%- endif -%}
         </div>
-        <!-- Copyright -->
-        <div id="disclaimer" class="row border-top py-3">
+        <div id="footer-bottom" class="row border-top py-3">
             <div id="copyright" class="col-sm-6">
-                <p>Copyright &copy; {{ "now" | date: "%Y" }} {{ site.author.name }}</p>
+                <p>Copyright &copy; {{ "now" | date: "%Y" }} - {{ site.authors.default.name | default: site.title }}</p>
             </div>
-            <div id="lydde" class="col-sm-6 text-end d-none d-md-block">
+            <div id="disclaimer" class="col-sm-6 text-end d-none d-md-block">
                 <a href="https://lydde.com">
-                    <img src="https://lydde.com/wp-content/uploads/2020/11/Teams-Invite.png"
-                         alt="{{ site.author.name }} is a subsidiary of LYDDE">
+                    <img src="{{ "/assets/lydde.png" | absolute_url }}"
+                         alt="{{ site.authors.default.name | default: site.title }} is a subsidiary of LYDDE">
                 </a>
             </div>
         </div>

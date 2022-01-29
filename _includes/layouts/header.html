@@ -1,3 +1,5 @@
+{% assign menus = site.settings.menus | where: "location", "header" %}
+
 <header id="header">
     <div id="header-top">
         <div class="d-lg-none spacer">&nbsp;</div>
@@ -33,7 +35,6 @@
 
             <!-- Navigation -->
             <div id="navbarContent" class="collapse navbar-collapse p-2 pt-5 p-lg-0">
-            {% assign menus = site.menu | where: "location", "header" %}
             {% if menus %}
                 {% for menu in menus %}
                 <!-- Site -->
@@ -41,11 +42,11 @@
                     <ul class="navbar-nav nav-pills">
                         {% for item in menu.links %}
                         <li class="nav-item">
-                            <a class="nav-link{% if page.url == item.link %} active{% endif %} px-3" 
-                            {% if page.url == item.link %}aria-current="page"{% endif %} 
-                            href="{{ item.link | absolute_url }}" title="{{ item.name }}">
-                            {% if item.icon %}<i class="{{ item.icon }}"></i>{% endif %}
-                                {{ item.name | escape }}
+                            <a class="nav-link px-3{%- if page.url == item.link -%} active{%- endif -%}" 
+                            {%- if page.url == item.link -%}aria-current="page"{%- endif -%} 
+                            href="{{ item.link | absolute_url }}" 
+                            title="{{ item.name }}">
+                            {%- if item.icon -%}<i class="{{ item.icon }}"></i>{%- endif -%}{{ item.name | escape }}
                             </a>
                         </li>
                         {% endfor %}
@@ -71,13 +72,13 @@
                 </ul>
                 <hr />
             {% endif %}
-                {%- if site.settings.social -%}
+            {%- if site.settings.social -%}
                 <!-- Social Network -->
                 <div class="d-lg-none">
                     <h4>Follow us</h4>
                     {% include snippets/social.html class="nav justify-content-center" %}
                 </div>
-                {%- endif -%}
+            {%- endif -%}
             </div>
         </div>
     </nav>

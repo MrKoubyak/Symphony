@@ -18,7 +18,7 @@ description: >
 
 # Author settings
 authors:
-  site:
+  default:
     name: YAKA Game Studio
     email: contact@yaka.games
     website: https://yaka.games
@@ -49,40 +49,40 @@ settings:
     baidu:
     facebook:
   analytics:
-  navigation:
+  menus:
     - title: Home Menu
       location: header
       position: left
       links:
-      - name: Home
+      - title: Home
         link: /
-      - name: News
+      - title: News
         link: /news/
     - title: Network
       location: header
       links:
-      - name: Studio
+      - title: Studio
         link: https://yaka.studio
-      - name: Play
+      - title: Play
         link: https://yaka.studio
         icon: 
     - title: Footer Menu 1
       location: footer
       links:
-      - name: Link 1
+      - title: Link 1
         link: /news/
-      - name: Link 2
+      - title: Link 2
         link: /news/
-      - name: Link 3
+      - title: Link 3
         link: https://yaka.studio
     - title: Footer Menu 2
       location: footer
       links:
-      - name: Link 1
+      - title: Link 1
         link: /news/
-      - name: Link 2
+      - title: Link 2
         link: /news/
-      - name: Link 3
+      - title: Link 3
         link: https://yaka.studio
   social:
     twitter:
@@ -135,6 +135,11 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+  - scope:
+      path: "/assets/resources"
+      type: "pages"
+    values:
+      layout: "default"
 
 # Files excluded
 exclude:

@@ -15,24 +15,8 @@
     <div class="container position-absolute top-50 start-50 translate-middle">
         <div class="row align-items-center">
             <div class="col">
-                <h1 class="display-1">
-                    {% if page.title %}
-                        {{ page.title | escape }}
-                    {% elsif site.title %}
-                        {{ site.title | escape }}
-                    {% else %}
-                        Welcome to Symphony theme
-                    {% endif %}
-                </h1>
-                <p class="lead">
-                    {% if page.excerpt %}
-                        {{ page.excerpt | strip_html | escape }}
-                    {% elsif site.description %}
-                        {{ site.description | escape }}
-                    {% else %}
-                        Review our documentation to fix issue
-                    {% endif %}
-                </p>
+                <h1 class="display-1">{{ page.title | default: site.title | default: "Welcome to Symphony theme" | escape }}</h1>
+                <p class="lead">{{ page.excerpt | default: "Review our documentation to fix issue" | strip_html | escape }}</p>
             </div>
             {% if page.action %}
             <div class="col-4 text-center">
