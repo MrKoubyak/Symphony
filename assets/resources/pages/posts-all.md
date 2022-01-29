@@ -2,7 +2,7 @@
 permalink: /news/
 title: News
 excerpt: Information about our World
-image: illustrations/news.png
+image: news.jpeg
 ---
 <section class="py-5">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">

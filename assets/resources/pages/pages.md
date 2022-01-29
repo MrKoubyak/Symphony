@@ -2,7 +2,7 @@
 permalink: /articles/
 title: Articles
 excerpt: All our articles
-image: illustrations/news.png
+image: pages.jpg
 ---
 <!-- Content -->
 <main class="p-3" aria-label="Content">

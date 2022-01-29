@@ -2,7 +2,7 @@
 permalink: /topics/
 title: Topics
 excerpt: Browse content by Topic
-image: illustrations/news.png
+image: categories.jpeg
 ---
 <!-- Content -->
 <main class="p-3" aria-label="Content">
