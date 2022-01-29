@@ -1,10 +1,11 @@
 {%- assign tags = page.tags -%}
 {%- if tags -%}
 <div id="tags">
+    <span class="h5">Tags</span>
     <ul class="nav">
     {% for tag in tags %}
         <li class="nav-item mx-1">
-            <a href="{{ "/topic#" | append: tag | absolute_url }}" title="{{ tag }}">{{ tag | | prepend: '#' }}</a>
+            <a href="{{ "/tags#" | append: tag | absolute_url }}" title="{{ tag }}">{{ tag | | prepend: '#' }}</a>
         </li>
     {% endfor %}
     </ul>
