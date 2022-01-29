@@ -15,9 +15,9 @@
                 <i class="far fa-calendar"></i><time datetime="{{ myDate }}">{{ myDate | date_to_string }}</time>
             </li>
         {%- if page.author -%}
-        {% foreach author in page.author %}
+        {% for author in page.author %}
             <li class="nav-item mx-1 badge bg-secondary">
-                by <a href="#author" class="text-reset btn-link">{{ page.author }}</a>
+                by <a href="#author" class="text-reset btn-link">{{ author }}</a>
             </li>
         {% endfor %}
         {%- endif -%}
