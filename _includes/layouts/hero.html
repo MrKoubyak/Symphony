@@ -1,10 +1,9 @@
 <section id="hero" class="position-relative{% if layout.splash or page.splash %} vh-100{% endif %}">
-{%- assign file = site.static_files | where: "file.name", page.image -%}
 {%- if page.trailer -%}
     <video autoplay muted loop poster="{{ page.image | prepend: site.settings.resources.images | absolute_url }}" class="background">
         <source src="{{ page.trailer | prepend: site.settings.resources.videos | absolute_url }}" type="video/mp4">
     </video>
-{%- elsif page.image and file -%}
+{%- elsif page.image -%}
     <picture>
         <source srcset="{{ page.image | prepend: site.settings.resources.images | absolute_url }}">
         <img src="{{ page.image | prepend: site.settings.resources.images | absolute_url }}" alt="{{ page.title | escape }}" class="background">
