@@ -15,22 +15,22 @@
                 </div>
             </div>
             {% endif %}
-            {%- if menus -%}
-            <!-- Links -->
-            {%- for menu in menus -%}
-            <div id="{{ menu.title | slugify }}" class="col-lg-3 col-sm-6">
-                <h2 class="h5">{{ menu.title }}</h2>
-                <div>
-                    <ul class="nav flex-column pb-3">
-                        {% for item in menu.links %}
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ item.link | absolute_url }}" title="about our {{ item.title }}">{{ item.title }}</a>
-                        </li>
-                        {% endfor %}
-                    </ul>
+            {% if menus %}
+                <!-- Links -->
+                {%- for menu in menus -%}
+                <div id="{{ menu.title | slugify }}" class="col-lg-3 col-sm-6">
+                    <h2 class="h5">{{ menu.title }}</h2>
+                    <div>
+                        <ul class="nav flex-column pb-3">
+                            {% for item in menu.links %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ item.link | absolute_url }}" title="about our {{ item.title }}">{{ item.title }}</a>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            {%- endfor -%}
+                {%- endfor -%}
             {%- endif -%}
         </div>
         <div id="footer-bottom" class="row border-top py-3">

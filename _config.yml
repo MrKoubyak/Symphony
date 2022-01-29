@@ -127,13 +127,14 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      image: launch.jpeg
+      image: post.jpeg
       author: author-1
   - scope:
       path: ""
       type: "pages"
     values:
       layout: "page"
+      image: page.jpeg
 
 # Files excluded
 exclude:
