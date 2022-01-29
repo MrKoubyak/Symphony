@@ -85,37 +85,17 @@ settings:
       - name: Link 3
         link: https://yaka.studio
   social:
-    - name: Twitter
+    twitter:
+      name: Twitter
       link: https://twitter.com/yakagamestudio
       share: https://twitter.com/share?url=
       username: yakagamestudio
       image: image-twitter.png
       card: summary
-    - name: Facebook
+    facebook:
+      name: Facebook
       link: https://facebook.com/yakagamestudio
       share: https://www.facebook.com/sharer/sharer.php?u=
-    - name: Instagram
-      link: https://instagram.com/yakagamestudio
-    - name: LinkedIn
-      link: https://www.linkedin.com/showcase/yakagamestudio
-      share: https://www.linkedin.com/shareArticle?url=
-    - name: Pinterest
-      link: https://www.pinterest.fr/YAKAGameStudio
-    - name: Twitch
-      link: https://www.twitch.tv/yakagamestudio
-    - name: Youtube
-      link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
-      twitter:
-        name: Twitter
-        link: https://twitter.com/yakagamestudio
-        share: https://twitter.com/share?url=
-        username: yakagamestudio
-        image: image-twitter.png
-        card: summary
-      facebook:
-        name: Facebook
-        link: https://facebook.com/yakagamestudio
-        share: https://www.facebook.com/sharer/sharer.php?u=
       
 
 collections:
