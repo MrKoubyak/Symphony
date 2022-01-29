@@ -2,7 +2,7 @@
 {% assign directory = site.authors %}
 {%- if authors -%}
     {%- if include.format == "list" -%}
-    <ul>
+    <ul class="{{ include.class }}">
         {%- for author in authors -%}
         <li class="nav-item mx-1 badge bg-secondary">
             by <a href="{{ directory[author].url | default: "#author" }}" class="text-reset btn-link">{{ directory[author].name }}</a>

@@ -2,9 +2,11 @@
     <div class="card text-dark bg-light h-100">
         <img src="{{ item.image | prepend: '/assets/images/' | absolute_url }}" class="card-img-top" alt="{{ item.title }}">
         <div class="card-body">
-            <h5 class="card-title">{{ item.title }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ item.date | date_to_string }}</h6>
             {% include categories.html %}
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-subtitle mb-2 text-muted">
+                <i class="far fa-calendar"></i>&nbsp;<time datetime="{{ item.date }}">{{ item.date | date_to_string }}</time>
+            </p>
             <p class="card-text">{{ item.excerpt | strip_html | truncatewords: 20 }}</p>
         </div>
         <div class="card-footer text-muted text-end">
