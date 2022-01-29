@@ -1,8 +1,8 @@
 {% assign authors = item.author %}
 {% assign directory = site.authors %}
-
+{{ authors | inspect }}
 {%- if authors -%}
-    {%- if include.format -%}
+    {%- if include.format == "list" -%}
     <ul>
         {%- for author in authors -%}
         <li class="nav-item mx-1 badge bg-secondary">
