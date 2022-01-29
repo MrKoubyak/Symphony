@@ -60,7 +60,7 @@
                 {%- assign item = site.pages | where: "path", path | first -%}
                 {%- if item.title and item.dir != "/" -%}
                     <li>
-                        <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}} in dir {{ page.dir }} and path {{ page.path }}</a>
+                        <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}} in dir {{ item.dir }} and path {{ item.path }}</a>
                     </li>
                 {%- endif -%}
                 {%- endfor -%}
