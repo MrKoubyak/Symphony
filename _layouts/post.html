@@ -20,8 +20,8 @@ layout: default
                         <i class="far fa-calendar"></i><time datetime="{{ myDate }}">{{ myDate | date_to_string }}</time>
                     </li>
                 </ul>
-                {% include "include snippets/author.html" format="list" %}
-                {% include "include snippets/category.html" class="nav justify-content-end" %}
+                {% include snippets/author.html format="list" %}
+                {% include snippets/category.html class="nav justify-content-end" %}
             </div>
             
         </div>
@@ -32,7 +32,7 @@ layout: default
     </section>
     <footer>
         {%- include share.html -%}
-        {%- include author.html -%}
+        {%- include snippets/author.html -%}
     </footer>
 </article>
 <aside>
