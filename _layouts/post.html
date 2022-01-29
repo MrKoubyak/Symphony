@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign item = page %}
 <article class="p-3">
     <header>
         <div class="border-bottom py-3 mb-3 row">
@@ -20,15 +21,18 @@ layout: default
                         <i class="far fa-calendar"></i> <time datetime="{{ myDate }}">{{ myDate | date_to_string }}</time>
                     </li>
                 </ul>
-                {% assign item = post %}
+            </div>
+            <div class="col">
                 {% include author.html format="list" %}
+            </div>
+            <div class="col">
                 {% include categories.html class="nav justify-content-end" %}
             </div>
-            
         </div>
     </header>
     <section>
         <div>{{ content }}</div>
+        {%- include tags.html -%}
     </section>
     <footer>
         {%- include share.html -%}
