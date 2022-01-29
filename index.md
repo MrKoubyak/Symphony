@@ -1,4 +1,4 @@
 ---
 layout: home
-image: discover.png
+image: home.jpeg
 ---

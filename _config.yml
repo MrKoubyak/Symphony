@@ -17,10 +17,16 @@ description: >
   We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences.
 
 # Author settings
-author:
-  name: YAKA Game Studio
-  email: contact@yaka.games
-  website: https://yaka.games
+authors:
+  site:
+    name: YAKA Game Studio
+    email: contact@yaka.games
+    website: https://yaka.games
+  author-1:
+    name: YAKA Game Studio
+    email: contact@yaka.games
+    website: https://yaka.games
+    twitter: koubyak
 
 # Site Settings
 settings:
@@ -33,7 +39,7 @@ settings:
     color: 
       primary: "#6f42c1"
       secondary: "#000000"
-      background:
+      background: "#000000"
     font:
   webmaster:
     google:
@@ -42,68 +48,75 @@ settings:
     yandex:
     baidu:
     facebook:
-
-
-# Navigation
-menus:
-  - title: Home Menu
-    location: header
-    position: left
-    links:
-    - name: Home
-      link: /
-    - name: News
-      link: /news/
-  - title: Network
-    location: header
-    links:
-    - name: Studio
-      link: https://yaka.studio
-    - name: Play
-      link: https://yaka.studio
-      icon: 
-  - title: Footer Menu 1
-    location: footer
-    links:
-    - name: Link 1
-      link: /news/
-    - name: Link 2
-      link: /news/
-    - name: Link 3
-      link: https://yaka.studio
-  - title: Footer Menu 2
-    location: footer
-    links:
-    - name: Link 1
-      link: /news/
-    - name: Link 2
-      link: /news/
-    - name: Link 3
-      link: https://yaka.studio
-
-
-# Social Network
-social:
-  - name: Twitter
-    link: https://twitter.com/yakagamestudio
-    share: https://twitter.com/share?url=
-    username: yakagamestudio
-    image: image-twitter.png
-    card: summary
-  - name: Facebook
-    link: https://facebook.com/yakagamestudio
-    share: https://www.facebook.com/sharer/sharer.php?u=
-  - name: Instagram
-    link: https://instagram.com/yakagamestudio
-  - name: LinkedIn
-    link: https://www.linkedin.com/showcase/yakagamestudio
-    share: https://www.linkedin.com/shareArticle?url=
-  - name: Pinterest
-    link: https://www.pinterest.fr/YAKAGameStudio
-  - name: Twitch
-    link: https://www.twitch.tv/yakagamestudio
-  - name: Youtube
-    link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
+  analytics:
+  navigation:
+    - title: Home Menu
+      location: header
+      position: left
+      links:
+      - name: Home
+        link: /
+      - name: News
+        link: /news/
+    - title: Network
+      location: header
+      links:
+      - name: Studio
+        link: https://yaka.studio
+      - name: Play
+        link: https://yaka.studio
+        icon: 
+    - title: Footer Menu 1
+      location: footer
+      links:
+      - name: Link 1
+        link: /news/
+      - name: Link 2
+        link: /news/
+      - name: Link 3
+        link: https://yaka.studio
+    - title: Footer Menu 2
+      location: footer
+      links:
+      - name: Link 1
+        link: /news/
+      - name: Link 2
+        link: /news/
+      - name: Link 3
+        link: https://yaka.studio
+  social:
+    - name: Twitter
+      link: https://twitter.com/yakagamestudio
+      share: https://twitter.com/share?url=
+      username: yakagamestudio
+      image: image-twitter.png
+      card: summary
+    - name: Facebook
+      link: https://facebook.com/yakagamestudio
+      share: https://www.facebook.com/sharer/sharer.php?u=
+    - name: Instagram
+      link: https://instagram.com/yakagamestudio
+    - name: LinkedIn
+      link: https://www.linkedin.com/showcase/yakagamestudio
+      share: https://www.linkedin.com/shareArticle?url=
+    - name: Pinterest
+      link: https://www.pinterest.fr/YAKAGameStudio
+    - name: Twitch
+      link: https://www.twitch.tv/yakagamestudio
+    - name: Youtube
+      link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
+      twitter:
+        name: Twitter
+        link: https://twitter.com/yakagamestudio
+        share: https://twitter.com/share?url=
+        username: yakagamestudio
+        image: image-twitter.png
+        card: summary
+      facebook:
+        name: Facebook
+        link: https://facebook.com/yakagamestudio
+        share: https://www.facebook.com/sharer/sharer.php?u=
+      
 
 collections:
   authors:
@@ -119,12 +132,12 @@ defaults:
     values:
       layout: "post"
       image: launch.jpeg
-      author: llefevre
+      author: author-1
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: "default"
+      layout: "pages"
 
 # Files excluded
 exclude:

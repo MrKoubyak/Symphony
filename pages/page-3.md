@@ -2,7 +2,7 @@
 layout: page
 title:  "Page 3"
 excerpt: My dummy page with lot of content
-author: llefevre
+author: author-1
 image: launch.jpeg
 trailer: 3851147.mp4
 ---
