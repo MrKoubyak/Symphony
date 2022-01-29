@@ -58,7 +58,7 @@
                 {%- assign paths = site.pages | map: "path" -%}
                 {%- for path in paths -%}
                 {%- assign item = site.pages | where: "path", path | first -%}
-                {%- if item.title and item.path contains "resources" -%}
+                {%- if item.title and item.path contains "resources/pages" -%}
                     <li>
                         <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
                     </li>
