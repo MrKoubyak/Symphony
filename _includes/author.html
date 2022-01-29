@@ -10,13 +10,12 @@
         {%- endfor -%}
     </ul>
     {%- else -%}
-    AUTHORS : {{ authors | inspect}}
-    {% assign author = authors | first %}
-    AUTHOR : {{ author | inspect}}
+    {%- for author in authors limit: 1 -%}
     <div id="author">
         <h5>{{ directory[author].name }}</h5>
         {{ directory[author].content }}
         {{ directory[author] | inspect}}
     </div>
+    {%- endfor -%}
     {%- endif -%}
 {%- endif -%}
