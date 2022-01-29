@@ -23,8 +23,8 @@
                     <div>
                         <ul class="nav flex-column pb-3">
                             {% for item in menu.links %}
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ item.link | absolute_url }}" title="about our {{ item.title }}">{{ item.title }}</a>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link p-0 text-muted" href="{{ item.link | absolute_url }}" title="About our {{ item.title }}">{{ item.title }}</a>
                             </li>
                             {% endfor %}
                         </ul>

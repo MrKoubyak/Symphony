@@ -17,9 +17,10 @@ layout: default
                     </li>
                     {%- assign myDate = page.date | default: "now" | date_to_xmlschema -%}
                     <li id="date" class="nav-item mx-1 badge bg-secondary">
-                        <i class="far fa-calendar"></i><time datetime="{{ myDate }}">{{ myDate | date_to_string }}</time>
+                        <i class="far fa-calendar"></i> <time datetime="{{ myDate }}">{{ myDate | date_to_string }}</time>
                     </li>
                 </ul>
+                {% assign item = post %}
                 {% include author.html format="list" %}
                 {% include categories.html class="nav justify-content-end" %}
             </div>
@@ -28,7 +29,6 @@ layout: default
     </header>
     <section>
         <div>{{ content }}</div>
-        {%- include tags.html -%}
     </section>
     <footer>
         {%- include share.html -%}
@@ -36,5 +36,5 @@ layout: default
     </footer>
 </article>
 <aside>
-    
+    {%- include tags.html -%}
 </aside>
