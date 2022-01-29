@@ -116,9 +116,6 @@ settings:
       
 
 collections:
-  authors:
-    permalink: /:collection/:name
-    output: true
 
 # Default layout
 defaults:

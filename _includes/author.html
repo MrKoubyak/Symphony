@@ -16,7 +16,7 @@
     <div id="author">
         {{ directory[author].content }}
         ---
-        {{ site.authors | where: ""}}
+        {{ directory[author]}}
     </div>
     {%- endif -%}
 {%- endif -%}
