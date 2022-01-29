@@ -1,5 +1,6 @@
 ---
 permalink: /tags/
+layout: default
 title: Tags
 excerpt: Browse content by Tag
 image: tags.jpeg

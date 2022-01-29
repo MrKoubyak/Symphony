@@ -1,5 +1,6 @@
 ---
 permalink: /topics/
+layout: default
 title: Topics
 excerpt: Browse content by Topic
 image: categories.jpeg
