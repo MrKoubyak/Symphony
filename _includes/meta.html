@@ -10,18 +10,20 @@
                 {{ words | plus: 150 | divided_by: 150 | append: ' min read' }}
                 {% endunless %}
             </li>
+            {%- assign myDate = page.date | default: "now"| date_to_xmlschema -%}
             <li id="date" class="nav-item mx-1 badge bg-secondary">
-                <i class="far fa-calendar"></i>
-                {{ page.date | default: "now" | date_to_string }}
+                <i class="far fa-calendar"></i><time datetime="{{ myDate }}">{{ myDate | date_to_string }}</time>
             </li>
-        {% if page.author %}
+        {%- if page.author -%}
+        {% foreach author in page.author %}
             <li class="nav-item mx-1 badge bg-secondary">
                 by <a href="#author" class="text-reset btn-link">{{ page.author }}</a>
             </li>
-        {% endif %}
+        {% endfor %}
+        {%- endif -%}
         </ul>
     </div>
-    {% if page.categories %}
+    {%- if page.categories -%}
     <div class="col">
         <ul id="categories" class="nav justify-content-end">
         {% for category in page.categories %}
@@ -29,5 +31,5 @@
         {% endfor %}
         </ul>
     </div>
-    {% endif %}
+    {%- endif -%}
 </div>

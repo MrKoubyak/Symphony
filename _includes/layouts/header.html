@@ -10,8 +10,8 @@
         <div class="container border rounded bg-white p-2 shadow">
             <!-- Logo -->
             <div id="logo" class="border rounded bg-white shadow">
-                <a href="{{ site.url }}" title="{{ site.title | escape }}">
-                    <img src="{{ site.logo | absolute_url }}" width="100" alt="{{ site.title | escape }}">
+                <a href="{{ site.url }}" title="{{ site.title | escape }}" rel="author">
+                    <img src="{{ site.logo | default: "/assets/logo.png" | absolute_url }}" width="100" alt="{{ site.title | escape }}">
                 </a>
             </div>
 
@@ -29,7 +29,7 @@
 
             <!-- Navigation -->
             <div id="navbarContent" class="collapse navbar-collapse p-2 pt-5 p-lg-0">
-            {% assign menus = site.menus | where: "location", "header" %}
+            {% assign menus = site.menu | where: "location", "header" %}
             {% if menus %}
                 {% for menu in menus %}
                 <!-- Site -->
@@ -50,19 +50,24 @@
                 <hr />
                 {% endfor %}
             {% else %}
+                <!-- Default Navigation -->
                 <ul class="navbar-nav">
-                {% assign items = site.pages %}
-                {% for item in items %}
-                {% if item.title %}
                     <li>
-                        <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}}</a>
+                        <a class="nav-link" href="{{ "/" | absolute_url }}" title="Home">Home</a>
                     </li>
-                {% endif %}
-                {% endfor %}
+                {%- assign paths = site.pages | map: "path" -%}
+                {%- for path in paths -%}
+                {%- assign item = site.pages | where: "path", path | first -%}
+                {%- if item.title and item.dir != "/" -%}
+                    <li>
+                        <a class="nav-link" href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{item.title}} in dir {{ page.dir }} and path {{ page.path }}</a>
+                    </li>
+                {%- endif -%}
+                {%- endfor -%}
                 </ul>
                 <hr />
             {% endif %}
-                {% if site.social %}
+                {%- if site.social -%}
                 <!-- Social Network -->
                 <div class="d-lg-none">
                     <h4>Follow us</h4>
@@ -75,7 +80,7 @@
                         {% endfor %}
                     </ul>
                 </div>
-                {% endif %}
+                {%- endif -%}
             </div>
         </div>
     </nav>

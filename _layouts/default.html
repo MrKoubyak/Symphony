@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="{{ page.language | default: site.settings.language }}">
+<html lang="{{ page.language | default: site.settings.language | default: "en" }}">
     <head>
-        {% include head.html %}
+        {%- include layouts/head.html -%}
     </head>
     <body class="bg-light">
         <!-- Header -->
-        {% include header.html %}
+        {%- include layouts/header.html -%}
         <!-- Hero -->
-        {% include hero.html %}
+        {% include layouts/hero.html %}
         <!-- Content -->
         <main aria-label="content" class="container">
             {{ content }}
         </main>
         <!-- Footer -->
-        {% include footer.html %}
+        {%- include layouts/footer.html -%}
         <!-- Scripts -->
-        {% include scripts.html %}
+        {%- include layouts/scripts.html -%}
     </body>
 </html>
