@@ -11,7 +11,7 @@ image: tags.jpeg
         <h3 id="{{ tag | first | slugify }}">{{ tag | first | capitalize }}</h3>
         <div class="row row-cols-1 row-cols-md-3">
             {% for item in tag.last %}
-            {% include /snippets/card.html %}
+            {% include card.html %}
             {% endfor %}
         </div>
     {% endfor %}
