@@ -2,13 +2,13 @@
     <li id="reading" class="nav-item mx-1 badge bg-secondary">
         <i class="far fa-clock"></i>
         {% capture words %}
-        {{ content | number_of_words | minus: 180 }}
+        {{ item.content | number_of_words | minus: 180 }}
         {% endcapture %}
         {% unless words contains '-' %}
         {{ words | plus: 150 | divided_by: 150 | append: ' min read' }}
         {% endunless %}
     </li>
     <li id="date" class="nav-item mx-1 badge bg-secondary">
-        <i class="far fa-calendar"></i>&nbsp;<time datetime="{{ item.date | default: "now" | date_to_xmlschema }}">{{ date | default: "now" | date_to_string }}</time>
+        <i class="far fa-calendar"></i>&nbsp;<time datetime="{{ item.date | default: "now" | date_to_xmlschema }}">{{ item.date | default: "now" | date_to_string }}</time>
     </li>
 </ul>

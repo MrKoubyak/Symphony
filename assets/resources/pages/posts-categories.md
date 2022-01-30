@@ -1,5 +1,5 @@
 ---
-permalink: /topics/
+permalink: /categories/
 layout: default
 title: Topics
 excerpt: Browse content by Topic

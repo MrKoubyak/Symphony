@@ -1,5 +1,5 @@
 ---
-permalink: /news/
+permalink: /posts/
 layout: default
 title: News
 excerpt: Information about our World
