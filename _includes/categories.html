@@ -9,7 +9,7 @@
     <ul class="{{ include.class | default: "nav flex-column nav-pills nav-fill"}}">
         {% for category in item.categories %}
             <li class="nav-item bg-primary-soft">
-                <h6 class="m-0 text-primary">{{ category }}</h6>
+                <h6 class="nav-link m-0 text-primary">{{ category }}</h6>
                 <a href="#" class="badge bg-primary text-dark stretched-link">09</a>
             </li>
         {% endfor %}

@@ -3,7 +3,7 @@ layout: page
 title:  "Page 3"
 excerpt: My dummy page with lot of content
 author: author-1
-image: launch.jpeg
+image: news.jpeg
 trailer: 3851147.mp4
 ---
 ## Title 2
