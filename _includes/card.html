@@ -1,8 +1,6 @@
-{% assign imagePath = site.settings.resources.images | default: "/assets/images/"%}
-{% assign videoPath = site.settings.resources.videos | default: "/assets/videos/"%}
 <div class="col mb-3">
     <div class="card text-dark bg-light h-100">
-        <img src="{{ item.image | prepend: imagePath | absolute_url }}" class="card-img-top" alt="{{ item.title }}">
+        <img src="{{ item.image | absolute_url }}" class="card-img-top" alt="{{ item.title }}">
         <div class="card-body">
             {% include categories.html %}
             <h5 class="card-title">{{ item.title }}</h5>
