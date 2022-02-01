@@ -3,7 +3,7 @@ permalink: /tags/
 layout: default
 title: Tags
 excerpt: Browse content by Tag
-image: tags.jpeg
+image: /assets/images/tags.jpeg
 ---
 <!-- Content -->
 <main class="p-3" aria-label="Content">

@@ -1,9 +1,9 @@
 ---
 permalink: /posts/
 layout: default
-title: News
+title: Posts
 excerpt: Information about our World
-image: news.jpeg
+image: /assets/images/posts.jpeg
 ---
 <section class="py-5">
     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">

@@ -1,9 +1,9 @@
 ---
 permalink: /categories/
 layout: default
-title: Topics
+title: Categories
 excerpt: Browse content by Topic
-image: categories.jpeg
+image: /assets/images/categories.jpeg
 ---
 <!-- Content -->
 <main class="p-3" aria-label="Content">

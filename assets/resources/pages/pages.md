@@ -1,9 +1,9 @@
 ---
 permalink: /pages/
 layout: default
-title: Articles
+title: Pages
 excerpt: All our articles
-image: pages.jpg
+image: /assets/images/pages.jpg
 ---
 <!-- Content -->
 <main class="p-3" aria-label="Content">
