@@ -5,7 +5,7 @@
     <div  class="container">
         <div id="footer-top"></div>
         {% if social or menus %}
-        <div id="footer-main" class="row py-3">
+        <div id="footer-main" class="row pt-3 border-bottom">
             {% if social %}
             <!-- Social Media -->
             <div id="social" class="col-sm-12 col-lg-6">
@@ -35,7 +35,7 @@
             {%- endif -%}
         </div>
         {% endif %}
-        <div id="footer-bottom" class="row border-top py-3">
+        <div id="footer-bottom" class="row py-3">
             <div id="copyright" class="col-sm-6">
                 <p>Copyright &copy; {{ "now" | date: "%Y" }} - {{ site.authors.default.name | default: site.title }}</p>
             </div>
