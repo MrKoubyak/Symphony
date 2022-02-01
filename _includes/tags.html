@@ -2,7 +2,7 @@
 {%- if tags -%}
 <div id="tags">
     <span class="h5">Tags</span>
-    <ul class="nav">
+    <ul class="nav my-3">
     {% for tag in tags %}
         <li class="nav-item mx-1">
             <a href="{{ "/tags#" | append: tag | absolute_url }}" title="{{ tag }}">{{ tag | | prepend: '#' }}</a>

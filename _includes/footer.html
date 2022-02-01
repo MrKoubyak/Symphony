@@ -1,10 +1,11 @@
 {%- assign menus = site.settings.menus | where: "location", "footer" -%}
 {%- assign social = site.settings.social -%}
 
-<footer id="footer" class="bg-light border-top text-muted pt-3">
+<footer id="footer" class="bg-light border-top text-muted">
     <div  class="container">
         <div id="footer-top"></div>
-        <div id="footer-main" class="row">
+        {% if social or menus %}
+        <div id="footer-main" class="row py-3">
             {% if social %}
             <!-- Social Media -->
             <div id="social" class="col-sm-12 col-lg-6">
@@ -33,6 +34,7 @@
                 {%- endfor -%}
             {%- endif -%}
         </div>
+        {% endif %}
         <div id="footer-bottom" class="row border-top py-3">
             <div id="copyright" class="col-sm-6">
                 <p>Copyright &copy; {{ "now" | date: "%Y" }} - {{ site.authors.default.name | default: site.title }}</p>
