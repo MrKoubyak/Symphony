@@ -1,6 +1,8 @@
 <div class="col mb-3">
     <div class="card text-dark bg-light h-100">
-        <img src="{{ item.image | absolute_url }}" class="card-img-top" alt="{{ item.title }}">
+        <a href="{{ item.url | absolute_url }}" title="Read {{ item.title }}">
+            <img src="{{ item.image | absolute_url }}" class="card-img-top" alt="{{ item.title }}">
+        </a>
         <div class="card-body">
             {% include categories.html %}
             <h5 class="card-title">{{ item.title }}</h5>
