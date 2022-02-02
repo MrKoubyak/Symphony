@@ -1,10 +1,11 @@
 ---
-permalink: /categories/
-layout: default
 title: Categories
+permalink: "/categories/"
+layout: default
 excerpt: Browse content by Topic
-image: /assets/images/categories.jpeg
+image: "/assets/images/categories.jpeg"
 ---
+
 <!-- Content -->
 <main class="p-3" aria-label="Content">
     <section class="container">

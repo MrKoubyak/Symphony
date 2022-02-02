@@ -1,6 +1,7 @@
 ---
-layout: null
-permalink: /robots.txt
+permalink: "/robots.txt"
+layout: 
 ---
+
 User-agent: *
 Disallow:

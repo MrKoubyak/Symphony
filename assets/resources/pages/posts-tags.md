@@ -1,10 +1,11 @@
 ---
-permalink: /tags/
-layout: default
 title: Tags
+permalink: "/tags/"
+layout: default
 excerpt: Browse content by Tag
-image: /assets/images/tags.jpeg
+image: "/assets/images/tags.jpeg"
 ---
+
 <!-- Content -->
 <main class="p-3" aria-label="Content">
     <section class="container">

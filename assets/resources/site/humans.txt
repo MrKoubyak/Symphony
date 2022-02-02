@@ -1,7 +1,8 @@
 ---
-layout: null
-permalink: /humans.txt
+permalink: "/humans.txt"
+layout: 
 ---
+
 {{ site.title }}
 
 /* TEAM */

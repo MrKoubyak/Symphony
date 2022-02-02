@@ -1,10 +1,11 @@
 ---
-permalink: /pages/
-layout: default
 title: Pages
+permalink: "/pages/"
+layout: default
 excerpt: All our articles
-image: /assets/images/pages.jpeg
+image: "/assets/images/pages.jpeg"
 ---
+
 <!-- Content -->
 <main class="p-3" aria-label="Content">
     <section class="container">

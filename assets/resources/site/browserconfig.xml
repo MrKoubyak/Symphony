@@ -1,7 +1,8 @@
 ---
-layout: null
-permalink: /browserconfig.xml
+permalink: "/browserconfig.xml"
+layout: 
 ---
+
 <?xml version="1.0" encoding="utf-8"?>
 <browserconfig>
     <msapplication>

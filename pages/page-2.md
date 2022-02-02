@@ -1,10 +1,11 @@
 ---
+title: Page 2
 layout: page
-title:  "Page 2"
 excerpt: My dummy post
 author: author-1
 image: categories.jpeg
 ---
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas elementum ligula, vel accumsan nulla hendrerit a. Duis viverra at ante pharetra lacinia. Maecenas feugiat arcu felis, id ultricies dolor vehicula eget. Cras quis felis urna. Suspendisse id vestibulum orci. Nulla facilisi. Fusce convallis ut turpis bibendum eleifend.
 
 Proin ultrices maximus suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed consectetur elementum nisi vel tincidunt. Nulla feugiat consequat nulla ut eleifend. Vestibulum hendrerit porttitor dolor, non tristique massa. Mauris facilisis interdum lorem vitae ultricies. Mauris commodo pretium dolor, eget bibendum leo sagittis sed. Donec sed ante nulla. Praesent tempor ultrices sapien at interdum. Sed pulvinar turpis quis nunc rhoncus ornare. Nullam in turpis a nisi gravida commodo. Duis in sem maximus, venenatis eros tempus, elementum lacus. Nunc leo est, eleifend et pretium id, mattis mattis nibh.

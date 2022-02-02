@@ -1,22 +1,35 @@
-# Welcome to Symphony!
-#
-# Is is a bootsrap theme for Jekyll engine
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that.
-# Others settings are in /_settings/
-
-#
-# Site Information
-#
+---
 title: Symphony
-url: "https://yakagamestudio.github.io"
-permalink: /news/:categories/:year/:month/:day/:title
-tagline: Game developer unleashed 
-logo: /assets/logo.png
-description: > 
-  We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences.
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    layout: post
+    image: post.jpeg
+    author: author-1
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: page
+    image: page.jpeg
+url: https://yakagamestudio.github.io
+permalink: "/news/:categories/:year/:month/:day/:title"
+tagline: Game developer unleashed
+logo: "/assets/logo.png"
+description: 'We are a young indie game studio developing multiplatform IA empowered
+  games and augmented reality experiences.
 
-# Author settings
+'
 authors:
   default:
     name: YAKA Game Studio
@@ -27,63 +40,61 @@ authors:
     email: contact@yaka.games
     website: https://yaka.games
     twitter: koubyak
-
-# Site Settings
 settings:
   language: fr
-  locale: "en_US"
+  locale: en_US
   resources:
-    images: /assets/images/
-    videos: /assets/videos/
+    images: "/assets/images/"
+    videos: "/assets/videos/"
   theme:
-    color: 
+    color:
       primary: "#6f42c1"
       secondary: "#000000"
       background: "#000000"
-    font:
+    font: 
   webmaster:
-    google:
-    bing:
-    alexa:
-    yandex:
-    baidu:
-    facebook:
-  analytics:
+    google: 
+    bing: 
+    alexa: 
+    yandex: 
+    baidu: 
+    facebook: 
+  analytics: 
   menus:
-    - title: Home Menu
-      location: header
-      position: left
-      links:
-      - title: Home
-        link: /
-      - title: News
-        link: /news/
-    - title: Network
-      location: header
-      links:
-      - title: Studio
-        link: https://yaka.studio
-      - title: Play
-        link: https://yaka.studio
-        icon: 
-    - title: Footer Menu 1
-      location: footer
-      links:
-      - title: Link 1
-        link: /news/
-      - title: Link 2
-        link: /news/
-      - title: Link 3
-        link: https://yaka.studio
-    - title: Footer Menu 2
-      location: footer
-      links:
-      - title: Link 1
-        link: /news/
-      - title: Link 2
-        link: /news/
-      - title: Link 3
-        link: https://yaka.studio
+  - title: Home Menu
+    location: header
+    position: left
+    links:
+    - title: Home
+      link: "/"
+    - title: News
+      link: "/news/"
+  - title: Network
+    location: header
+    links:
+    - title: Studio
+      link: https://yaka.studio
+    - title: Play
+      link: https://yaka.studio
+      icon: 
+  - title: Footer Menu 1
+    location: footer
+    links:
+    - title: Link 1
+      link: "/news/"
+    - title: Link 2
+      link: "/news/"
+    - title: Link 3
+      link: https://yaka.studio
+  - title: Footer Menu 2
+    location: footer
+    links:
+    - title: Link 1
+      link: "/news/"
+    - title: Link 2
+      link: "/news/"
+    - title: Link 3
+      link: https://yaka.studio
   social:
     twitter:
       name: Twitter
@@ -113,31 +124,5 @@ settings:
       link: https://www.twitch.tv/
     youtube:
       link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
-      
-
-collections:
-
-# Default layout
-defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      image: post.jpeg
-      author: author-1
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      image: page.jpeg
-
-# Files excluded
 exclude:
-  - readme.md
-
-# Build settings
-# markdown: kramdown
-
-# Jekyl plugins
+- readme.md

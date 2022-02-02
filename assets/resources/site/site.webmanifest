@@ -1,7 +1,8 @@
 ---
-layout: null
-permalink: /site.webmanifest
+permalink: "/site.webmanifest"
+layout: 
 ---
+
 {
   "name": "{{ site.title }}",
   "short_name": "{{ site.title }}",
