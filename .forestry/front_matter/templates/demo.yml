@@ -1,0 +1,22 @@
+---
+label: demo
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: excerpt
+  label: excerpt
+- type: text
+  name: author
+  label: author
+- type: file
+  name: image
+  label: image
+- type: text
+  name: trailer
+  label: trailer
