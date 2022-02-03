@@ -76,10 +76,19 @@ plugins:
 # Plugins settings
 #
 paginate: 10
+
+# Archives
 jekyll-archives:
   enabled:
     - tags
     - categories
+  layout: default
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 #
 # Site Settings
