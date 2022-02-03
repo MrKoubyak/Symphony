@@ -26,3 +26,14 @@ Refers to files within the `_layouts` directory, that define the markup for your
 `home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page.
 
 ## Usage
+
+
+## Plugin
+  - jekyll-feed             #https://github.com/jekyll/jekyll-feed
+  - jekyll-archives         #https://github.com/jekyll/jekyll-archives
+  - jekyll-sitemap          #https://github.com/jekyll/jekyll-sitemap
+  - jekyll-avatar           #https://github.com/jekyll/jekyll-avatar
+  - jekyll-seo-tag          #https://github.com/jekyll/jekyll-seo-tag
+  - jekyll-mentions         #https://github.com/jekyll/jekyll-mentions
+  - jekyll-redirect-from    #https://github.com/jekyll/jekyll-redirect-from
+                            #https://github.com/jekyll/github-metadata
