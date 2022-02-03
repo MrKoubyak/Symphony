@@ -65,6 +65,7 @@ exclude:
 #
 plugins:
   - jekyll-feed             #https://github.com/jekyll/jekyll-feed
+  - jekyll-archives         #https://github.com/jekyll/jekyll-archives
   - jekyll-sitemap          #https://github.com/jekyll/jekyll-sitemap
   - jekyll-avatar           #https://github.com/jekyll/jekyll-avatar
   - jekyll-seo-tag          #https://github.com/jekyll/jekyll-seo-tag
@@ -75,6 +76,10 @@ plugins:
 # Plugins settings
 #
 paginate: 10
+jekyll-archives:
+  enabled:
+    - tags
+    - categories
 
 #
 # Site Settings
