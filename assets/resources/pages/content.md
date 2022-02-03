@@ -9,11 +9,9 @@ image: "/assets/images/pages.jpeg"
 <main class="p-3" aria-label="Content">
     <section class="container">
         <div class="row row-cols-1 row-cols-md-3">
-            {% assign filteredPages = site.pages | where: "layout", "page" %}
             <ul>
-            {% for item in filteredPages %}
+            {% for item in site.pages %}
                 <li><a href="{{ item.path | absolute_url }}">{{ item.path }}</a></li>
-            {% endif %}
             {% endfor %}
             </ul>
         </div>
