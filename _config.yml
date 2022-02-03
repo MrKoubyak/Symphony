@@ -1,57 +1,96 @@
----
-title: Symphony
-timezone: UTC
-collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    image: post.jpeg
-    author: author-1
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: page
-    image: page.jpeg
-url: https://yakagamestudio.github.io
-permalink: "/news/:categories/:year/:month/:day/:title"
-tagline: Game developer unleashed
-logo: "/assets/logo.png"
-description: 'We are a young indie game studio developing multiplatform IA empowered
-  games and augmented reality experiences.
+# Welcome to YAKA Games Jekyll Theme !
+#
+# This is a bootsrap 5 theme for Jekyll engine
+# This config file is meant for settings that affect your whole site
+# Others settings are in /_settings/
 
-'
+#
+# Site Information
+#
+title: Symphony
+description: "We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences."
+timezone: UTC
+url: "https://yakagamestudio.github.io"
+permalink: /news/:categories/:year/:month/:day/:title
+tagline: Game developer unleashed 
+logo: "/assets/logo.png"
+favicon: "assets/icons/favicon.ico"
+mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
+
+#
+# Author Information
+#
 authors:
   default:
     name: YAKA Game Studio
     email: contact@yaka.games
-    website: https://yaka.games
+    site: https://yaka.games
   author-1:
     name: Author 1
     email: contact@yaka.games
-    website: https://yaka.games
+    github: koubyak
+    site: https://yaka.games
     twitter: koubyak
+    avatar: "/assets/images/avatar1.jpg"
+    biography: "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+
+#
+# Defaults values
+#
+defaults:
+# all posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      image: post.jpeg
+      author: author-1
+  # all pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      image: page.jpeg
+
+#
+# Files excluded
+#
+exclude:
+  - readme.md
+
+#
+# Plugins used
+#
+plugins:
+  - jekyll-feed             #https://github.com/jekyll/jekyll-feed
+  - jekyll-sitemap          #https://github.com/jekyll/jekyll-sitemap
+  - jekyll-avatar           #https://github.com/jekyll/jekyll-avatar
+  - jekyll-seo-tag          #https://github.com/jekyll/jekyll-seo-tag
+  - jekyll-mentions         #https://github.com/jekyll/jekyll-mentions
+  - jekyll-redirect-from    #https://github.com/jekyll/jekyll-redirect-from
+                            #https://github.com/jekyll/github-metadata
+#
+# Plugins settings
+#
+paginate: 10
+
+#
+# Site Settings
+#
 settings:
+  # Languages
   language: fr
   locale: en_US
-  resources:
-    images: "/assets/images/"
-    videos: "/assets/videos/"
+  # Theme
   theme:
     color:
       primary: "#6f42c1"
       secondary: "#000000"
       background: "#000000"
     font: 
+  # Search Engine
   webmaster:
     google: 
     bing: 
@@ -60,6 +99,7 @@ settings:
     baidu: 
     facebook: 
   analytics: 
+  # Navigation Menu
   menus:
   - title: Home Menu
     location: header
@@ -95,19 +135,18 @@ settings:
       link: "/news/"
     - title: Link 3
       link: https://yaka.studio
+  # Social Networks
   social:
     twitter:
       name: Twitter
       username: yakagamestudio
       link: https://twitter.com/yakagamestudio
-      share: https://twitter.com/share?url=
       image: image-twitter.png
       card: summary
     facebook:
       name: Facebook
       username: yakagamestudio
       link: https://facebook.com/yakagamestudio
-      share: https://www.facebook.com/sharer/sharer.php?u=
     instagram:
       name: Instagram
       username: yakagamestudio
@@ -115,7 +154,6 @@ settings:
     linkedin:
       name: LinkedIn
       link: https://www.linkedin.com/showcase/yakagamestudio
-      share: https://www.linkedin.com/shareArticle?url=
     pinterest:
       username: YAKAGameStudio
       link: https://www.pinterest.fr/
@@ -124,5 +162,8 @@ settings:
       link: https://www.twitch.tv/
     youtube:
       link: https://www.youtube.com/channel/UCqhzZEPsQ18xUt0vc1pekCw
-exclude:
-- readme.md
+  # Promote
+  share:
+    twitter: https://twitter.com/share?url=
+    facebook: https://www.facebook.com/sharer/sharer.php?u=
+    linkedin: https://www.linkedin.com/shareArticle?url=
