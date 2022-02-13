@@ -47,7 +47,8 @@ authors:
       linkedin:
         name: LinkedIn
         link: https://www.linkedin.com/showcase/yakagamestudio
-      website: https://yaka.games
+      blog: 
+        link: https://yaka.games
 
 #
 # Defaults values

@@ -2,7 +2,7 @@
     {% if include.format == nil %}
     <ul class="{{ include.class | default: "nav"}} py-3">
         {% for category in item.categories %}
-            <li class="nav-item mx-1 badge bg-primary">{{ category }}</li>
+            <li class="nav-item mx-1 badge bg-primary py-2">{{ category }}</li>
         {% endfor %}
     </ul>
     {% else %}

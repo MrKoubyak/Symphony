@@ -9,10 +9,11 @@ image: "/assets/images/tags.jpeg"
 <!-- Content -->
 <main class="p-3" aria-label="Content">
     <section class="container">
-    <ul>
+    <ul class="list-group list-group-flush">
         {% for tag in site.tags %}
-        {% assign tagItems = tag.last %}
-        <li>{{ tag | first | capitalize }} - {{ tagItems.size }} - {{ tag.last.size }}</li>
+        <a href="{{tag | first | slugify | preprend: '#'}}">
+        <li class="list-group-item">{{ tag | first | capitalize }}<span class="badge bg-primary rounded-pill">{{ tag.last.size }}</span></li>
+        </a>
         {% endfor %}
     </ul>
 
