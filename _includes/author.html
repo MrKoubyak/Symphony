@@ -16,5 +16,12 @@
         {{ directory[author].content }}
     </div>
     {%- endfor -%}
+
+    {{ site.github.contributors | jsonify }}
+
+    <hr />
+    {% for contributor in site.github.contributors %}
+        NAME : {{ contributor.name }}
+    {% endfor %}
     {%- endif -%}
 {%- endif -%}
