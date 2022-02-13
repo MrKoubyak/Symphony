@@ -9,10 +9,10 @@ image: "/assets/images/tags.jpeg"
 <!-- Content -->
 <main class="p-3" aria-label="Content">
     <section class="container">
-    <ul class="list-group list-group-flush">
+    <ul class="row row-cols-4">
         {% for tag in site.tags %}
-        <a href="{{tag | first | slugify | preprend: '#'}}">
-        <li class="list-group-item">{{ tag | first | capitalize }}<span class="badge bg-primary rounded-pill">{{ tag.last.size }}</span></li>
+        <a href="{{tag | first | preprend: '#' | slugify }}">
+        <li class="col">{{ tag | first | capitalize }}<span class="badge bg-primary rounded-pill">{{ tag.last.size }}</span></li>
         </a>
         {% endfor %}
     </ul>
