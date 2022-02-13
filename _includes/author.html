@@ -20,8 +20,12 @@
     {{ site.github.contributors | jsonify }}
 
     <hr />
+    CONTRIBUTORs
     {% for contributor in site.github.contributors %}
-        NAME : {{ contributor.name }}
+        NAME : {{ contributor.login }}
+        AVATAR : {{ contributor.avatar_url }}
+
+        {% avatar contributor.login %}
     {% endfor %}
     {%- endif -%}
 {%- endif -%}

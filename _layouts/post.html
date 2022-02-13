@@ -26,10 +26,7 @@ layout: default
     </article>
     <aside class="col-lg-3 pt-lg-5">
         <div>
-            <h1>About</h1>
-            {{ post.excerpt | strip_html }}
-            <hr />
-            <p>This site is open source. <a href="{% github_edit_link %}">Improve this page</a></p>
+            <a href="{% github_edit_link %}">Improve this page</a>
         </div>
         <div class="sticky-top">
             {%- include categories.html format="post" -%}
