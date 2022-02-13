@@ -25,11 +25,15 @@ layout: default
         </footer>
     </article>
     <aside class="col-lg-3 pt-lg-5">
-        <p>This site is open source. <a href="{% github_edit_link %}">Improve this page</a></p>
         <div>
-            <span class="h5">Categories</span>
-            {% include categories.html class="nav" %}
+            <h1>About</h1>
+            {{ post.excerpt | strip_html }}
+            <hr />
+            <p>This site is open source. <a href="{{ github_edit_link }}">Improve this page</a></p>
         </div>
-        {%- include tags.html -%}
+        <div class="sticky-top">
+            {%- include categories.html format="post" -%}
+            {%- include tags.html -%}
+        </div>
     </aside>
 </div>

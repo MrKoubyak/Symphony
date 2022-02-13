@@ -5,7 +5,7 @@
         </a>
         <div class="card-body">
             {% include categories.html %}
-            <h5 class="card-title">{{ item.title }}</h5>
+            <h5 class="card-title"><a href="{{ item.url | absolute_url }}" title="{{ item.title }}">{{ item.title }}</a></h5>
             {% if include.display != "post" %}
             {% include info.html %}
             {% endif %}

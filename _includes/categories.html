@@ -1,19 +1,21 @@
 {% if item.categories %}
     {% if include.format == nil %}
-    <ul class="{{ include.class | default: "nav"}} py-2">
+    <ul class="{{ include.class | default: "nav"}} py-3">
         {% for category in item.categories %}
             <li class="nav-item mx-1 badge bg-primary">{{ category }}</li>
         {% endfor %}
     </ul>
     {% else %}
-    <ul class="{{ include.class | default: "nav flex-column nav-pills nav-fill"}} my-3">
-        {% for category in item.categories %}
-            <li class="nav-item bg-primary-soft">
-                <h6 class="nav-link m-0 text-primary">{{ category }}</h6>
-                <a href="#" class="badge bg-primary text-dark stretched-link">09</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <div>
+        <h5>Categories</h5>
+        <ul class="nav nav-justified py-3">
+            {% for category in item.categories %}
+                <li class="nav-item btn btn-primary mb-1 text-start h5">
+                    {{ category }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
     {% endif %}
 
 {% endif %}
