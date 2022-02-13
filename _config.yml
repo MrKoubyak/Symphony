@@ -28,12 +28,26 @@ authors:
     site: https://yaka.games
   author-1:
     name: Author 1
+    position: An editor at Blogzine
     email: contact@yaka.games
-    github: koubyak
-    site: https://yaka.games
-    twitter: koubyak
     avatar: "/assets/images/avatar1.jpg"
     biography: "Hi, I am Sal, the author of Mundana, the theme you're currently previewing. I hope you like it!"
+    social:
+      twitter:
+        username: koubyak
+        link: https://twitter.com/yakagamestudio
+      github:
+        name: GitHub
+        username: koubyak
+        link: https://facebook.com/yakagamestudio
+      instagram:
+        name: Instagram
+        username: yakagamestudio
+        link: https://instagram.com/yakagamestudio
+      linkedin:
+        name: LinkedIn
+        link: https://www.linkedin.com/showcase/yakagamestudio
+      website: https://yaka.games
 
 #
 # Defaults values

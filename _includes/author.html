@@ -10,22 +10,39 @@
         {%- endfor -%}
     </ul>
     {%- else -%}
-    {%- for author in authors limit: 1 -%}
+    {%- for people in authors limit: 1 -%}
+    {% assign author = directory[people] %}
     <div id="author">
-        <h5>{{ directory[author].name }}</h5>
-        {{ directory[author].content }}
+        <!-- Avatar -->
+        <div class="avatar avatar-xxl me-2 me-md-4">
+            <img class="avatar-img rounded-circle" src="{{ author.avatar | absolute_url }}" alt="avatar">
+        </div>
+        <!-- Information -->
+        <div>
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div>
+                    <h4 class="m-0"><a href="#">{{ author.name }}</a></h4>
+                    <small>{{ author.position }}</small>
+                </div>
+                <a href="#" class="btn btn-xs btn-primary-soft">View Articles</a>
+            </div>
+            <p class="my-2">{{ author.content }}</p>
+            <!-- Social icons -->
+            {% assign social = author.social %}
+            {%- if social -%}
+            <ul class="nav">
+                {%- for item in social -%}
+                {%- assign key = item | first -%}
+                {% if social[key].link %}
+                <li class="nav-item">
+                    <a class="nav-link ps-0 pe-2 fs-5" href="{{ social[key].link }}{{ social[key].username }}" title="Follow us on {{ social[key].title | default: key | capitalize }}"><i class="fab fa-{{ key | downcase }}"></i></a>
+                </li>
+                {% endif %}
+                {%- endfor -%}
+            </ul>
+            {%- endif -%}				
+        </div>
     </div>
     {%- endfor -%}
-
-    {{ site.github.contributors | jsonify }}
-
-    <hr />
-    CONTRIBUTORs
-    {% for contributor in site.github.contributors %}
-        NAME : {{ contributor.login }}
-        AVATAR : {{ contributor.avatar_url }}
-
-        {% avatar contributor.login %}
-    {% endfor %}
     {%- endif -%}
 {%- endif -%}
