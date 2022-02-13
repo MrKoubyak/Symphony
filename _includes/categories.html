@@ -8,11 +8,9 @@
     {% else %}
     <div>
         <h5>Categories</h5>
-        <ul class="nav nav-justified py-3">
+        <ul class="d-grid p-0 pt-3">
             {% for category in item.categories %}
-                <li class="nav-item btn btn-primary mb-1 text-start h5">
-                    {{ category }}
-                </li>
+                <li class="btn btn-primary mb-1 text-start h5">{{ category }}</li>
             {% endfor %}
         </ul>
     </div>

@@ -65,6 +65,7 @@ exclude:
 #
 plugins:
   - jekyll-archives
+  - jekyll-github-metadata
 #
 # Plugins settings
 #
