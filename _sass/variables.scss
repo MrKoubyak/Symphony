@@ -5,16 +5,8 @@
 //
 // Color system
 //
-{%- if site.settings.theme.color.primary -%}
-$primary:  "{{ site.settings.theme.color.primary }}";
-{%- endif -%}
-{%- if site.settings.theme.color.secondary -%}
-$secondary:  "{{ site.settings.theme.color.secondary }}";
-{%- endif -%}
-{%- if site.settings.theme.color.background -%}
-$body-bg: "{{ site.settings.theme.color.background }}",
-{%- endif -%}
-
+$primary: #6f42c1;
+$secondary: #ffc107;
 
 //
 // Icons
