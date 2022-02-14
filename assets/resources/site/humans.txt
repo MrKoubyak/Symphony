@@ -2,32 +2,24 @@
 permalink: "/humans.txt"
 layout: 
 ---
+Site Name:      {{ site.title }}
+---
+About us
+{{ site.description }}
 
-{{ site.title }}
-
-/* TEAM */
-GENERATED from Template for 
-                            
-Mon rôle sur ce projet: Mon nom
-
-                            
-Site: e-mail, lien vers un formulaire de contact, etc.
-
-                            
-Twitter: votre compte Twitter
-
-                            
-Location: Ville, Pays
-
-						
-
-							
-/* THANKS */
-
-							
-Name: nom ou URL
-               
-/* SITE */
+{%- assign social = site.settings.social -%}
+{%- if social -%}
+---
+Social Information
+{%- for item in social -%}
+{%- assign key = item | first -%}
+{%- if social[key].link -%}
+{{ social[key].title | default: key | capitalize }}:       {{ social[key].link }}{{ social[key].username }}
+{% endif %}
+{%- endfor -%}
+{%- endif -%}
+            
+---
 Website:        {{ site.url }}
 Last update:    {{ site.time }}
 Standards:      HTML5, CSS3   

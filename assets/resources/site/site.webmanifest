@@ -23,7 +23,11 @@ layout:
       "type": "image/png"
     }
   ],
+  {%- if site.settings.theme.color.primary -%}
   "theme_color": "{{ site.settings.theme.color.primary }}",
-  "background_color": "none",
+  {%- endif -%}
+  {%- if site.settings.theme.color.background -%}
+  "background_color": "{{ site.settings.theme.color.background }}",
+  {%- endif -%}
   "display": "standalone"
 }

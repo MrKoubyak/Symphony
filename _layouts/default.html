@@ -3,15 +3,17 @@
     <head>
         {%- include head.html -%}
     </head>
-    <body class="bg-light">
+    <body>
+        <a href="#main-content" class="visually-hidden">Skip to main content</a>
         <!-- Header -->
         {%- include header.html -%}
         <!-- Hero -->
         {% include hero.html %}
         <!-- Content -->
-        <main aria-label="content" class="container">
+        <div id="content" aria-label="content" class="container">
             {{ content }}
-        </main>
+        </div>
+        <button type="button" id="back-to-top" title="Back to top" href="#" class="btn btn-lg btn-outline-primary"><i class="fa-solid fa-up-to-line"></i></button>
         <!-- Footer -->
         {%- include footer.html -%}
         <!-- Scripts -->
