@@ -30,7 +30,12 @@ layout: default
         <section class="sticky-top pt-3">
             {%- include categories.html format="post" -%}
             {%- include tags.html -%}
-            {%- include toc.html html=content -%}
+        </section>
+        <section>
+            <div id="toc">
+                <h5>Tags</h5>
+                {%- include toc.html html=content -%}
+            </div>
         </section>
     </aside>
 </div>

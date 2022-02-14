@@ -1,7 +1,7 @@
 ---
 title: Categories
 permalink: "/categories/"
-layout: page
+layout: categories
 excerpt: Browse content by Topic
 image: "/assets/images/categories.jpeg"
 ---
