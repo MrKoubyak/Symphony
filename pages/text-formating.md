@@ -1,17 +1,6 @@
 ---
-title: Text Formating
+title: Cheatsheet
 ---
-## Basic Formatting
-
-With Markdown, it is possible to emphasize words by making them *italicized*, using *astericks* or _underscores_, or making them **bold**, using **double astericks** or __double underscores__. Of course, you can combine those two formats, with both _**bold and italicized**_ text, using any combination of the above syntax. You can also add a strikethrough to text using a ~~double tilde~~.
-
-## Paragraphs
-
-This is what a paragraph looks like. For the purpose of demonstration, the rest of this paragraph and the next paragraph after will mean absolutely nothing. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
-
-Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
-
-
 ## Headings
 
 Sometimes it is useful to have different levels of headings to structure your documents. Start lines with `#` to create headings. Multiple `##` in a row denote smaller heading size. The following demonstrate the full range of heading sizes:
@@ -28,23 +17,96 @@ Sometimes it is useful to have different levels of headings to structure your do
 
 ###### Heading Six (h6)
 
+## Emphasis
+
+Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~
+
+## Paragraphs
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas elementum ligula, vel accumsan nulla hendrerit a. Duis viverra at ante pharetra lacinia. Maecenas feugiat arcu felis, id ultricies dolor vehicula eget. Cras quis felis urna. Suspendisse id vestibulum orci. Nulla facilisi. Fusce convallis ut turpis bibendum eleifend.
+
+Proin ultrices maximus suscipit. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed consectetur elementum nisi vel tincidunt. Nulla feugiat consequat nulla ut eleifend. Vestibulum hendrerit porttitor dolor, non tristique massa. Mauris facilisis interdum lorem vitae ultricies. Mauris commodo pretium dolor, eget bibendum leo sagittis sed. Donec sed ante nulla. Praesent tempor ultrices sapien at interdum. Sed pulvinar turpis quis nunc rhoncus ornare. Nullam in turpis a nisi gravida commodo. Duis in sem maximus, venenatis eros tempus, elementum lacus. Nunc leo est, eleifend et pretium id, mattis mattis nibh.
+
+## Unordered and Numbered Lists
+
+* List item one
+    * List item one
+        * List item one
+        * List item two
+        * List item three
+        * List item four
+    * List item two
+    * List item three
+    * List item four
+* List item two
+* List item three
+* List item four
+
+1. List item one
+    1. List item one
+        1. List item one
+        2. List item two
+        3. List item three
+        4. List item four
+    2. List item two
+    3. List item three
+    4. List item four
+2. List item two
+3. List item three
+4. List item four
+
+## Definition List
+term
+: definition
+: another definition
+
+another term
+and another term
+: and a definition for the term
+
 ## Links
 
 You can create an inline link by wrapping link text in square brackets `[ ]`, and then wrapping the URL in parentheses `( )`. For example, it is very easy to [link to Google!](http://google.com).
+[I'm an inline-style link](https://www.google.com)
 
-## Blockquotes
+[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
 
-Blockquotes are useful for denoting quotes, or highlighting a large block of text. Single line blockquote:
+[I'm a reference-style link][Arbitrary case-insensitive reference text]
 
-> This quote will change your life.
+[I'm a relative reference to a repository file](../blob/master/LICENSE)
 
-Multi line blockquote with a cite reference:
+[You can use numbers for reference-style link definitions][1]
 
-> People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I'm actually as proud of the things we haven't done as the things I have done. Innovation is saying no to 1,000 things.
+Or leave it empty and use the [link text itself].
+
+URLs and URLs in angle brackets will automatically get turned into links. 
+http://www.example.com or <http://www.example.com> and sometimes 
+example.com (but not on Github, for example).
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org
+[1]: http://slashdot.org
+[link text itself]: http://www.reddit.com
+
+## Images
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
+Reference-style: 
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 ## Code and Syntax Highlighting
 
-Code blocks are part of the Markdown spec, but syntax highlighting isn't. However, many renderers - like GitHub or most Jekyll themes - support syntax highlighting. Which languages are supported and how those language names should be written will vary from renderer to renderer. You can find the full list of supported programming languages [here](https://github.com/jneen/rouge/wiki/List-of-supported-languages-and-lexers). Also, it is possible to do `inline code blocks`, by wrapping the text in ` ` ` quotations.
+Inline `code` has `back-ticks around` it.
 
 ```
 No language indicated, so no syntax highlighting.
@@ -69,57 +131,59 @@ adder(2, 6);
 // > 8
 {% endhighlight %}
 
-Another option is to embed your code through [Gist](https://en.support.wordpress.com/gist/).
-
-## Unordered and Numbered Lists
-
-You can make an unordered and nested list by preceding one or more lines of text with `-`, `*`, or `+`, and indenting sublists. The following lists show the full range of possible list formats.
-
-* List item one
-    * List item one
-        * List item one
-        * List item two
-        * List item three
-        * List item four
-    * List item two
-    * List item three
-    * List item four
-* List item two
-* List item three
-* List item four
-
-Numbered lists are made by using numbers instead of bullet points.
-
-1. List item one
-    1. List item one
-        1. List item one
-        2. List item two
-        3. List item three
-        4. List item four
-    2. List item two
-    3. List item three
-    4. List item four
-2. List item two
-3. List item three
-4. List item four
-
-## MathJax Example
-
-The [Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation) is a partial differential equation that describes how the quantum state of a quantum system changes with time:
-
-$$
-i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \left [ \frac{-\hbar^2}{2\mu}\nabla^2 + V(\mathbf{r},t)\right ] \Psi(\mathbf{r},t)
-$$
-
-[Joseph-Louis Lagrange](https://en.wikipedia.org/wiki/Joseph-Louis_Lagrange) was an Italian mathematician and astronomer who was responsible for the formulation of Lagrangian mechanics, which is a reformulation of Newtonian mechanics.
-
-$$ \frac{\mathrm{d}}{\mathrm{d}t} \left ( \frac {\partial  L}{\partial \dot{q}_j} \right ) =  \frac {\partial L}{\partial q_j} $$
-
 ## Tables
 
-Title 1               | Title 2               | Title 3               | Title 4
---------------------- | :-------------------: | :-------------------- | --------------------:
-lorem                 | lorem ipsum           | lorem ipsum dolor     | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
-lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit | lorem ipsum dolor sit
+| A simple | table |
+| with multiple | lines|
+
+| Header1 | Header2 | Header3 |
+|:--------|:-------:|--------:|
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|----
+| cell1   | cell2   | cell3   |
+| cell4   | cell5   | cell6   |
+|=====
+| Foot1   | Foot2   | Foot3
+{: rules="groups"}
+
+## Blockquotes
+
+Blockquotes are useful for denoting quotes, or highlighting a large block of text. Single line blockquote:
+
+> This quote will change your life.
+
+> A nice blockquote with Title
+{: title="Blockquote title"}
+
+Multi line blockquote with a cite reference:
+
+> People think focus means saying yes to the thing you've got to focus on. But that's not what it means at all. It means saying no to the hundred other good ideas that there are. You have to pick carefully. I'm actually as proud of the things we haven't done as the things I have done. Innovation is saying no to 1,000 things.
+
+## Footnotes
+
+This is a text with a footnote[^1].
+
+[^1]: And here is the definition.
+
+
+## Abbreviations
+This is an HTML
+example.
+
+*[HTML]: Hyper Text Markup Language
+
+## Horizontal Rule
+Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores
