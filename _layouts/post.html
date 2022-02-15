@@ -16,7 +16,7 @@ layout: default
 
             </div>
         </header>
-        <main id="main-content">
+        <main id="main-content" data-bs-spy="scroll" data-bs-target="tocScrollSpy" data-bs-offset="0" tabindex="0">
             <article>{{ content }}</article>
         </main>
         <footer>
@@ -30,11 +30,9 @@ layout: default
         <section class="sticky-top pt-3">
             {%- include categories.html format="post" -%}
             {%- include tags.html -%}
-        </section>
-        <section>
             <div id="toc">
                 <h5>Content</h5>
-                {%- include toc.html html=content id="tocid" class="class" item_class="item_class" submenu_class="submenu_class"  -%}
+                {%- include toc.html html=content id="tocScrollSpy" class="nav flex-column" item_class="nav-item" anchor_class="nav-link" submenu_class="nav flex-column"  -%}
             </div>
         </section>
     </aside>

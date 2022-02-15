@@ -3,15 +3,25 @@ layout: page
 ---
 <ul class="row row-cols-4 nav">
     {% for tag in site.tags %}
-    <a href="#{{tag | first | slugify }}" class="nav-item mb-1">
-    <li class="d-flex justify-content-between align-items-center bg-warning-soft rounded p-2 position-relative btn btn-outline-primary">{{ tag | first | capitalize }}<span class="badge bg-primary rounded-pill">{{ tag.last.size }}</span></li>
+    <a href="#{{tag | first | slugify }}" class="nav-link">
+    <li class="nav-item d-flex justify-content-between align-items-center bg-warning-soft btn btn-outline-primary">{{ tag | first | capitalize }}<span class="badge bg-secondary rounded-pill">{{ tag.last.size }}</span></li>
     </a>
     {% endfor %}
 </ul>
 
+
+<ul class="row row-cols-4 nav nav-pills" id="pills-tab" role="tablist">
+    {% for tag in site.tags %}
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="{{tag | first | slugify }}-tab" data-bs-toggle="pill" data-bs-target="#{{tag | first | slugify }}" type="button" role="tab" aria-controls="{{tag | first | slugify }}" aria-selected="true">{{ tag | first | capitalize }}<span class="badge bg-secondary rounded-pill">{{ tag.last.size }}</span></button>
+    </li>
+    {% endfor %}
+</ul>
+
+<div class="tab-content" id="pills-tabContent">
 {% for tag in site.tags %}
-<article>
-    <h3 id="{{ tag | first | slugify }}" class="border-bottom py-2 mb-3">{{ tag | first | capitalize }}</h3>
+<article class="tab-pane fade" id="{{ tag | first | slugify }}" role="tabpanel" aria-labelledby="{{ tag | first | slugify }}-tab">
+    <h3 class="border-bottom py-2 mb-3">{{ tag | first | capitalize }}</h3>
     <div class="row row-cols-1 row-cols-md-3">
         {% for item in tag.last %}
         {% include card.html %}
@@ -19,3 +29,4 @@ layout: page
     </div>
 </article>
 {% endfor %}
+</div>
