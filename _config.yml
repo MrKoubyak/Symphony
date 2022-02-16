@@ -39,10 +39,6 @@ defaults:
       layout: page
       image: page.jpeg
 
-collections:
-  - authors
-  - settings
-
 #
 # Files excluded
 #
