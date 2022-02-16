@@ -8,11 +8,11 @@ layout: page
     {% for tag in site.tags %}
     <li 
         role="presentation"
-        class="nav-item d-grid">
+        class="nav-item d-grid pb-2">
         <button
-        id="{{tag | first | slugify }}-tab" 
+        id="{{tag | first | slugify | | append: '-tab' }}" 
         data-bs-toggle="pill" 
-        data-bs-target="#{{tag | first | slugify }}" 
+        data-bs-target="{{tag | first | slugify | prepend: '#' }}" 
         type="button" 
         role="tab"
         aria-controls="{{tag | first | slugify }}" 
