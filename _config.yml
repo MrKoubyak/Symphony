@@ -1,7 +1,7 @@
 # Welcome to YAKA Games Jekyll Theme !
 # Version : 1.0.0
 #
-# This is a bootsrap 5 theme for Jekyll engine
+# This is a bootstrap 5 theme for Jekyll engine
 # This config file is meant for settings that affect your whole site
 # Others settings are in /_settings/
 
@@ -9,14 +9,13 @@
 # Site Information
 #
 title: Symphony
-description: "We are a young indie game studio developing multiplatform IA empowered games and augmented reality experiences."
+description: "This is a bootstrap 5 theme for Jekyll engine"
 timezone: UTC
 url: "https://yakagamestudio.github.io"
 permalink: /news/:categories/:year/:month/:day/:title
-tagline: Game developer unleashed 
+tagline: A bootstrap 5 theme for Jekyll 
 logo: "/assets/logo.png"
 favicon: "assets/icons/favicon.ico"
-mailchimp-list: "https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b"
 
 #
 # Defaults values
@@ -38,19 +37,13 @@ defaults:
       layout: page
       image: page.jpeg
 
+
+
 #
 # Files excluded
 #
 exclude:
   - readme.md
-
-#
-# Site Settings
-#
-settings:
-  # Languages
-  language: fr
-  locale: en_US
 
 #
 # Plugins used
