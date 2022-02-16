@@ -1,0 +1,25 @@
+---
+name: Author 1
+position: An editor at Blogzine
+email: contact@yaka.games
+avatar: "/assets/images/avatar1.jpg"
+social:
+  twitter:
+    username: koubyak
+    link: https://twitter.com/yakagamestudio
+  github:
+    name: GitHub
+    username: koubyak
+    link: https://facebook.com/yakagamestudio
+  instagram:
+    name: Instagram
+    username: yakagamestudio
+    link: https://instagram.com/yakagamestudio
+  linkedin:
+    name: LinkedIn
+    link: https://www.linkedin.com/showcase/yakagamestudio
+  blog: 
+    link: https://yaka.games
+---
+
+Lorem ipsusm

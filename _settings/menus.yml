@@ -1,0 +1,35 @@
+# Navigation Menu
+- title: Home Menu
+  location: header
+  position: left
+  links:
+  - title: Home
+    link: "/"
+  - title: News
+    link: "/news/"
+- title: Network
+  location: header
+  links:
+  - title: Studio
+    link: https://yaka.studio
+  - title: Play
+    link: https://yaka.studio
+    icon: 
+- title: Footer Menu 1
+  location: footer
+  links:
+  - title: Link 1
+    link: "/news/"
+  - title: Link 2
+    link: "/news/"
+  - title: Link 3
+    link: https://yaka.studio
+- title: Footer Menu 2
+  location: footer
+  links:
+  - title: Link 1
+    link: "/news/"
+  - title: Link 2
+    link: "/news/"
+  - title: Link 3
+    link: https://yaka.studio
