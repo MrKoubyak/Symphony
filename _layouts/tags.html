@@ -1,19 +1,28 @@
 ---
 layout: page
 ---
-<ul class="row row-cols-4 nav" id="pills-tab" role="tablist">
+<ul 
+    id="pills-tab" 
+    class="row row-cols-4 nav" 
+    role="tablist">
     {% for tag in site.tags %}
-    <a href="#{{tag | first | slugify }}" class="nav-link" role="presentation">
     <li 
-        class="nav-item d-flex justify-content-between align-items-center bg-warning-soft btn btn-outline-primary"
+        role="presentation"
+        class="nav-item d-grid">
+        <button
         id="{{tag | first | slugify }}-tab" 
         data-bs-toggle="pill" 
-        data-bs-target="#{{ tag | first | slugify }}" 
+        data-bs-target="#{{tag | first | slugify }}" 
         type="button" 
-        role="tab" 
+        role="tab"
         aria-controls="{{tag | first | slugify }}" 
-        aria-selected="true">{{ tag | first | capitalize }}<span class="badge bg-secondary rounded-pill">{{ tag.last.size }}</span></li>
-    </a>
+        aria-selected="true" 
+        class="btn btn-outline-primary text-start position-relative">
+        {{ tag | first | capitalize }}
+        <span
+            class="badge bg-secondary rounded-pill position-absolute top-50 end-0 translate-middle-y mx-3">{{ tag.last.size }}</span>
+        </button>
+    </li>
     {% endfor %}
 </ul>
 
@@ -21,7 +30,7 @@ layout: page
     <article class="tab-pane fade show active" id="default" role="tabpanel" aria-labelledby="default-tab">
         <h3 class="border-bottom py-2 mb-3">Select a Tags</h3>
         <div class="row row-cols-1 row-cols-md-3">
-            to see content
+            <p>to see content</p>
         </div>
     </article>
     {% for tag in site.tags %}
