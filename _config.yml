@@ -37,6 +37,9 @@ defaults:
       layout: page
       image: page.jpeg
 
+include:
+  - _settings
+  - _pages
 
 
 #
