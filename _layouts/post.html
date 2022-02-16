@@ -16,7 +16,7 @@ layout: default
 
             </div>
         </header>
-        <main id="main-content" data-bs-spy="scroll" data-bs-target="tocScrollSpy" data-bs-offset="0" tabindex="0">
+        <main id="main-content" data-bs-spy="scroll" data-bs-target="#tocScrollSpy" data-bs-offset="0" tabindex="0">
             <article>{{ content }}</article>
         </main>
         <footer>
@@ -32,7 +32,7 @@ layout: default
             {%- include tags.html -%}
             <div id="toc">
                 <h5>Content</h5>
-                {%- include toc.html html=content id="tocScrollSpy" class="nav flex-column" item_class="nav-item" anchor_class="nav-link" submenu_class="nav flex-column"  -%}
+                {%- include toc.html html=content id="tocScrollSpy" class="nav nav-pills flex-column" item_class="nav-item" anchor_class="nav-link" submenu_class="nav flex-column"  -%}
             </div>
         </section>
     </aside>

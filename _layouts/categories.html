@@ -1,3 +1,6 @@
+---
+layout: page
+---
 {% for categorie in site.categories %}
 <article>
     <h3 id="{{ categorie | first | slugify }}" class="border-bottom py-2 mb-3">{{ categorie | first | capitalize }}</h3>
