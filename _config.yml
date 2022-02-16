@@ -16,6 +16,8 @@ permalink: /news/:categories/:year/:month/:day/:title
 tagline: A bootstrap 5 theme for Jekyll 
 logo: "/assets/logo.png"
 favicon: "assets/icons/favicon.ico"
+language: fr
+locale: en_US
 
 #
 # Defaults values
@@ -37,10 +39,9 @@ defaults:
       layout: page
       image: page.jpeg
 
-include:
-  - _settings
-  - _pages
-
+collections:
+  - authors
+  - settings
 
 #
 # Files excluded

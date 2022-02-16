@@ -1,5 +1,5 @@
 ---
 layout: home
-image: home.jpeg
+image: /assets/images/home.jpeg
 ---
 
