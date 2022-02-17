@@ -4,9 +4,10 @@
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  */
+ $YS-font: 'Basic', sans-serif;
  body
  {
-     font-family:'Basic', sans-serif;
+     font-family:$YS-font;
  }
  h1
  {
