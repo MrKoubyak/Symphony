@@ -15,7 +15,7 @@
     <div id="author" class="d-flex p-2 p-md-4 my-3 bg-dark bg-opacity-25 rounded">
         <!-- Avatar -->
         <div class="me-2 me-md-4">
-            <img class="rounded-circle" src="{{ author.avatar | default: site.logo | absolute_url }}" alt="{{ author.name | append: ' avatar' }}" width="100">
+            <img class="rounded-circle" src="{{ author.picture | default: site.logo | absolute_url }}" alt="{{ author.name | append: ' avatar' }}" width="100">
         </div>
         <!-- Information -->
         <div class="flex-fill">
@@ -24,9 +24,8 @@
                     <h4 class="m-0">{{ author.name }}</h4>
                     <small>{{ author.position }}</small>
                 </div>
-                <a href="#" class="btn btn-xs btn-primary">View Articles</a>
             </div>
-            <p class="my-2">{{ author.content }}</p>
+            <p class="my-2">{{ author.content | default: author.description }}</p>
             <!-- Social icons -->
             {% assign social = author.social %}
             {%- if social -%}

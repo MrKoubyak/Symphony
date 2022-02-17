@@ -1,7 +1,8 @@
-{% assign facebook = site.settings.social.facebook| default: site.data.settings.social.facebook %}
-{% assign twitter = site.settings.social.twitter| default: site.data.settings.social.twitter %}
-{% assign webmaster = site.settings.webmaster| default: site.data.settings.webmaster %}
-
+{%- assign facebook = site.settings.social.facebook| default: site.data.settings.social.facebook -%}
+{%- assign twitter = site.settings.social.twitter| default: site.data.settings.social.twitter -%}
+{%- assign webmaster = site.settings.webmaster| default: site.data.settings.webmaster -%}
+{%- assign description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape -%}
+{%- assign theme = site.settings.theme | site.data.settings.theme -%}
 
 <meta charset="utf-8">
 <meta name="viewport"
@@ -12,8 +13,9 @@
 <meta property="og:title" content="{{ page.title | default: site.title }}" />
 <meta property="twitter:title" content="{{ page.title | default: site.title }}" />
 <meta property="og:site_name" content="{{ site.title }}">
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+<meta name="application-name" content="{{ site.title }}">
 
-{% assign description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
 <meta name="description" content="{{ description }}">
 <meta property="og:description" content="{{ description }}" />
 
@@ -23,10 +25,10 @@
 
 <meta name="author" content="{{ site.authors.default.name }}">
 {% if twitter.username %}
-    <meta name="twitter:site" content="@{{ twitter.username | remove:'@' }}" />
-    {% if page.author.twitter %}
-    <meta name="twitter:creator" content="@{{ page.author.twitter | remove:'@' }}" />
-    {% endif %}
+<meta name="twitter:site" content="@{{ twitter.username | remove:'@' }}" />
+{% if page.author.twitter %}
+<meta name="twitter:creator" content="@{{ page.author.twitter | remove:'@' }}" />
+{% endif %}
 {% endif %}
 
 <link rel="canonical" href="{{ page.url | absolute_url }}">
@@ -35,27 +37,27 @@
 <!-- Style -->
 <link rel="stylesheet" type="text/css" href="{{ "/assets/styles/main.css" | absolute_url }}">
 
+{%- if webmaster %}
 <!-- Search Engine & Analytics -->
-{% if webmaster %}
-    {% if webmaster.google %}
-    <meta name="google-site-verification" content="{{ webmaster.google }}" />
-    {% endif %}
-    {% if webmaster.bing %}
-    <meta name="msvalidate.01" content="{{ webmaster.bing }}" />
-    {% endif %}
-    {% if webmaster.alexa %}
-    <meta name="alexaVerifyID" content="{{ webmaster.alexa }}" />
-    {% endif %}
-    {% if webmaster.yandex %}
-    <meta name="yandex-verification" content="{{ webmaster.yandex }}" />
-    {% endif %}
-    {% if webmaster.baidu %}
-    <meta name="baidu-site-verification" content="{{ webmaster.baidu }}" />
-    {% endif %}
-    {% if webmaster.facebook %}
-    <meta name="facebook-domain-verification" content="{{ webmaster.facebook }}" />
-    {% endif %}
-{% endif %}
+{%- if webmaster.verification.google %}
+<meta name="google-site-verification" content="{{ webmaster.verification.google }}" />
+{%- endif %}
+{%- if webmaster.verification.bing %}
+<meta name="msvalidate.01" content="{{ webmaster.verification.bing }}" />
+{%- endif %}
+{%- if webmaster.verification.alexa %}
+<meta name="alexaVerifyID" content="{{ webmaster.verification.alexa }}" />
+{%- endif %}
+{%- if webmaster.verification.yandex %}
+<meta name="yandex-verification" content="{{ webmaster.verification.yandex }}" />
+{%- endif %}
+{%- if webmaster.verification.baidu %}
+<meta name="baidu-site-verification" content="{{ webmaster.verification.baidu }}" />
+{%- endif %}
+{%- if webmaster.verification.facebook %}
+<meta name="facebook-domain-verification" content="{{ webmaster.verification.facebook }}" />
+{%- endif %}
+{%- endif %}
 
 <!-- Browser Config -->
 <link rel="manifest" href="{{ "/site.webmanifest" | absolute_url }}">
@@ -67,34 +69,34 @@
 <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/icons/favicon-16x16.png" | aboslute_url }}">
 <link rel="shortcut icon" href="{{ "/assets/icons/favicon.ico" | absolute_url }}">
 <link type="image/png" rel="apple-touch-icon" href="{{ "/assets/icons/apple-touch-icon-180x180.png" | absolute_url }}" sizes="180x180">
-<link rel="mask-icon" type="image/svg+xml" href="{{ "/assets/icons/safari-pinned-tab.svg" | absolute_url }}" color="{{ site.settings.theme.color.primary }}">
+<link rel="mask-icon" type="image/svg+xml" href="{{ "/assets/icons/safari-pinned-tab.svg" | absolute_url }}" color="{{ theme.color.primary }}">
 
-<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
-<meta name="application-name" content="{{ site.title }}">
-<meta name="msapplication-TileColor" content="{{ site.settings.theme.color.primary }}">
-<meta name="theme-color" content="{{ site.settings.theme.color.primary }}">
+{%- if theme.color.primary -%}
+<meta name="msapplication-TileColor" content="{{ theme.color.primary }}">
+<meta name="theme-color" content="{{ theme.color.primary }}">
+{%- endif -%}
 
 <!-- Open Graph -->
-{% if page.layout == "home" %}
-    <meta property="og:type" content="website" />
-{% else %}
-    <meta property="og:type" content="article" />
-    {% if page.date %}
-    <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
-    <meta property="article:modified_time" content="{{ "now" | date_to_xmlschema }}" />
-    {% endif %}
-    {% if facebook.link %}
-    <meta property="article:publisher" content="{{ facebook.link }}" />
-    {% endif %}
-    {% if page.author %}
-    <meta property="article:author" content="{{ author.page }}" />
-    {% endif %}
-{% endif %}
+{%- if page.layout == "home" -%}
+<meta property="og:type" content="website" />
+{%- else -%}
+<meta property="og:type" content="article" />
+{%- if page.date -%}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
+<meta property="article:modified_time" content="{{ "now" | date_to_xmlschema }}" />
+{%- endif -%}
+{%- if facebook.link -%}
+<meta property="article:publisher" content="{{ facebook.link }}" />
+{%- endif %}
+{%- if page.author -%}
+<meta property="article:author" content="{{ author.page }}" />
+{%- endif -%}
+{%- endif -%}
 
 {% assign image = page.image %}
 {% if image %}
-    <meta property="og:image" content="{{ page.image | prepend: site.settings.resources.images | absolute_url }}" />
-    <meta property="twitter:image" content="{{ page.image | prepend: site.settings.resources.images | absolute_url }}" />
+    <meta property="og:image" content="{{ page.image | absolute_url }}" />
+    <meta property="twitter:image" content="{{ page.image | absolute_url }}" />
     <meta name="twitter:card" content="{{ page.twitter.card | default: twitter.card | default: "summary_large_image" }}" />
     {% if image.height %}
     <meta property="og:image:height" content="{{ image.height }}" />
@@ -117,11 +119,7 @@
       "url": "{{ site.url }}",
       "logo": "{{ site.logo }}"
     }
-    </script>
-    <script type="application/ld+json">
-    {{ facebook | jsonify }}
-    </script>
-
+</script>
 
 {% if page.apple %}
 <!-- Apps Store -->
