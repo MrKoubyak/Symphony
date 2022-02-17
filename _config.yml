@@ -29,7 +29,7 @@ defaults:
       type: posts
     values:
       layout: post
-      image: post.jpeg
+      image: /assets/images/post.jpeg
       author: author-1
   # all pages
   - scope:
@@ -37,7 +37,7 @@ defaults:
       type: pages
     values:
       layout: page
-      image: page.jpeg
+      image: /assets/images/page.jpeg
 
 #
 # Files excluded
