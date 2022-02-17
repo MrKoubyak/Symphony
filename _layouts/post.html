@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 {% assign item = page %}
 <div class="row">
     <section class="col-lg-9 mb-2 mb-sm-0 pb-sm-5">
@@ -28,12 +27,10 @@ layout: default
         <section>
         </section>
         <section class="sticky-top pt-3">
-            {%- include categories.html format="post" -%}
-            {%- include tags.html -%}
-            <div id="toc">
-                <h5>Content</h5>
-                {%- include toc.html html=content id="tocScrollSpy" class="nav nav-pills flex-column" item_class="nav-item" anchor_class="nav-link" submenu_class="nav flex-column"  -%}
-            </div>
+            {%- include post-categories.html -%}
+            {%- include post-tags.html -%}
+            <hr> /
+            {%- include post-toc.html html=content id="tocScrollSpy" class="nav nav-pills flex-column" item_class="nav-item" anchor_class="nav-link" submenu_class="nav flex-column"  -%}
         </section>
     </aside>
 </div>
