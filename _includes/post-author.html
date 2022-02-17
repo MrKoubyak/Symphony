@@ -1,6 +1,6 @@
-{% assign authors = item.author %}
+{% assign authors = page.authors %}
 {% assign directory = site.authors %}
-{%- if authors -%}
+{%- if authors.size > 0 -%}
     {%- if include.format == "list" -%}
     <ul class="{{ include.class }}">
         {%- for author in authors -%}

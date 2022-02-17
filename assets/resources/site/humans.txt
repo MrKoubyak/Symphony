@@ -5,7 +5,7 @@ layout: null
 {%- assign social = site.settings.social -%}
 Site Name:      {{ site.title }}
 {{ site.description }}
-{%- if social -%}
+{% if social %}
 ***
 Social Information
 {%- for item in social -%}

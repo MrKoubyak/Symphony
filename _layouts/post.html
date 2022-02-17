@@ -10,7 +10,7 @@ layout: default
                     {% include info.html %}
                 </div>
                 <div class="col py-3 py-sm-0">
-                    {% include author.html format="list" class="nav justify-content-md-end" %}
+                    {% include post-author.html format="list" class="nav justify-content-md-end" %}
                 </div>
 
             </div>
@@ -19,8 +19,8 @@ layout: default
             <article>{{ content }}</article>
         </main>
         <footer>
-            {%- include share.html -%}
-            {%- include author.html -%}
+            {%- include post-share.html -%}
+            {%- include post-author.html -%}
         </footer>
     </section>
     <aside class="col-lg-3">
