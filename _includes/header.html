@@ -1,5 +1,5 @@
-{%- assign menus = site.settings.menus | where: "location", "header" -%}
-{%- assign social = site.settings.social -%}
+{%- assign menus = site.settings.menus.header | default: site.data.settings.menus.header -%}
+{%- assign social = site.settings.social | default: site.data.settings.social -%}
 
 <header id="header">
     <div id="header-top">

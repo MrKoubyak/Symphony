@@ -1,5 +1,5 @@
 {% assign authors = page.author %}
-{% assign directory = site.authors %}
+{% assign directory = site.authors | default: site.data.authors %}
 {%- if authors.size > 0 -%}
     {%- if include.format == "list" -%}
     <ul class="{{ include.class }}">

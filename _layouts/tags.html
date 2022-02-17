@@ -10,14 +10,14 @@ layout: page
         role="presentation"
         class="nav-item d-grid pb-2">
         <button
-        id="{{tag | first | slugify | | append: '-tab' }}" 
-        data-bs-toggle="pill" 
-        data-bs-target="{{tag | first | slugify | prepend: '#' }}" 
-        type="button" 
-        role="tab"
-        aria-controls="{{tag | first | slugify }}" 
-        aria-selected="true" 
-        class="btn btn-outline-primary text-start position-relative">
+            id="{{tag | first | slugify | | append: '-tab' }}" 
+            data-bs-toggle="pill" 
+            data-bs-target="{{tag | first | slugify | prepend: '#' }}" 
+            type="button" 
+            role="tab"
+            aria-controls="{{tag | first | slugify }}" 
+            aria-selected="true" 
+            class="btn btn-outline-primary text-start position-relative">
         {{ tag | first | capitalize }}
         <span
             class="badge bg-secondary rounded-pill position-absolute top-50 end-0 translate-middle-y mx-3">{{ tag.last.size }}</span>

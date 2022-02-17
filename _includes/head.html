@@ -1,6 +1,6 @@
-{% assign facebook = site.social | where: "name", "Facebook" %}
-{% assign twitter = site.social | where: "name", "Twitter" %}
-{% assign webmaster = site.settings.webmaster %}
+{% assign facebook = site.settings.social.facebook| default: site.data.settings.social.facebook %}
+{% assign twitter = site.settings.social.twitter| default: site.data.settings.social.twitter %}
+{% assign webmaster = site.settings.webmaster| default: site.data.settings.webmaster %}
 
 
 <meta charset="utf-8">
@@ -17,11 +17,11 @@
 <meta name="description" content="{{ description }}">
 <meta property="og:description" content="{{ description }}" />
 
-<meta property="og:locale" content="{{ page.locale | default: site.settings.locale }}" />
+<meta property="og:locale" content="{{ page.locale | default: site.locale }}" />
 
 <link type="text/plain" rel="author" href="{{ "/humans.txt" | absolute_url }}"/>
 
-<meta name="author" content="{{ site.author.name }}">
+<meta name="author" content="{{ site.authors.default.name }}">
 {% if twitter.username %}
     <meta name="twitter:site" content="@{{ twitter.username | remove:'@' }}" />
     {% if page.author.twitter %}

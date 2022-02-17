@@ -1,5 +1,6 @@
-{%- assign menus = site.settings.menus | where: "location", "footer" -%}
-{%- assign social = site.settings.social -%}
+{%- assign menus = site.settings.menus.footer | default: site.data.settings.menus.footer -%}
+{%- assign social = site.settings.social| default: site.data.settings.social -%}
+{%- assign authors = site.authors | default: site.data.authors -%}
 
 <footer id="footer" class="bg-light border-top text-muted">
     <div  class="container">
@@ -37,12 +38,12 @@
         {% endif %}
         <div id="footer-bottom" class="row py-3">
             <div id="copyright" class="col-sm-6">
-                <p>Copyright &copy; {{ "now" | date: "%Y" }} - {{ site.authors.default.name | default: site.title }}</p>
+                <p>Copyright &copy; {{ "now" | date: "%Y" }} - {{ authors.default.name | default: site.title }}</p>
             </div>
             <div id="disclaimer" class="col-sm-6 text-end d-none d-md-block">
                 <a href="https://lydde.com">
                     <img src="{{ "/assets/lydde.png" | absolute_url }}"
-                         alt="{{ site.authors.default.name | default: site.title }} is a subsidiary of LYDDE">
+                         alt="{{ authors.default.name | default: site.title }} is a subsidiary of LYDDE">
                 </a>
             </div>
         </div>
