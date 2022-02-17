@@ -1,5 +1,5 @@
 ---
-title: Page 2
+title: Page with image
 layout: page
 excerpt: My dummy post
 author: author-1
