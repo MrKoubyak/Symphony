@@ -1,7 +1,7 @@
-{% if page.categories.size > 0 %}
+{% if item.categories.size > 0 %}
     {% if include.format == nil %}
     <ul class="{{ include.class | default: "nav"}} py-1">
-        {% for category in page.categories %}
+        {% for category in item.categories %}
             <li class="nav-item mx-1 badge bg-primary py-2">{{ category }}</li>
         {% endfor %}
     </ul>
@@ -9,7 +9,7 @@
     <div>
         <h5>Categories</h5>
         <ul class="d-grid p-0 pt-3">
-            {% for category in page.categories %}
+            {% for category in item.categories %}
                 <li class="btn btn-primary mb-1 text-start h5">{{ category }}</li>
             {% endfor %}
         </ul>
