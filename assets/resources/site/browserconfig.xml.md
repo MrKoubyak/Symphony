@@ -1,8 +1,8 @@
 ---
 permalink: "/browserconfig.xml"
-layout: 
+layout: null
 ---
-
+{%- assign theme = site.settings.theme -%}
 <?xml version="1.0" encoding="utf-8"?>
 <browserconfig>
     <msapplication>
@@ -11,7 +11,9 @@ layout:
           <square150x150logo src="{{"/assets/icons/mstile-150x150.png" | absolute_url}}"/>
           <square310x310logo src="{{"/assets/icons/mstile-310x310.png" | absolute_url}}" />
           <wide310x150logo src="{{"/assets/icons/mstile-310x150.png" | absolute_url}}" />
-          <TileColor>{{ site.settings.theme.color.primary }}</TileColor>
+          {% if theme.color.primary %}
+          <TileColor>{{ theme.color.primary }}</TileColor>
+          {% endif %}
         </tile>
     </msapplication>
 </browserconfig>

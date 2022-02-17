@@ -1,8 +1,8 @@
 ---
 permalink: "/site.webmanifest"
-layout: 
+layout: null
 ---
-
+{%- assign theme = site.settings.theme -%}
 {
   "name": "{{ site.title }}",
   "short_name": "{{ site.title }}",
@@ -23,11 +23,11 @@ layout:
       "type": "image/png"
     }
   ],
-  {%- if site.settings.theme.color.primary -%}
-  "theme_color": "{{ site.settings.theme.color.primary }}",
+  {%- if theme.color.primary -%}
+  "theme_color": "{{ theme.color.primary }}",
   {%- endif -%}
-  {%- if site.settings.theme.color.background -%}
-  "background_color": "{{ site.settings.theme.color.background }}",
+  {%- if theme.color.background -%}
+  "background_color": "{{ theme.color.background }}",
   {%- endif -%}
   "display": "standalone"
 }

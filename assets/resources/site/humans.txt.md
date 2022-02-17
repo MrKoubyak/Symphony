@@ -1,15 +1,13 @@
 ---
 permalink: "/humans.txt"
-layout: 
+layout: null
 ---
+{%- assign social = site.settings.social -%}
 Site Name:      {{ site.title }}
----
-About us
 {{ site.description }}
 
-{%- assign social = site.settings.social -%}
-{%- if social -%}
----
+{% if social %}
+***
 Social Information
 {%- for item in social -%}
 {%- assign key = item | first -%}
@@ -17,11 +15,13 @@ Social Information
 {{ social[key].title | default: key | capitalize }}:       {{ social[key].link }}{{ social[key].username }}
 {% endif %}
 {%- endfor -%}
-{%- endif -%}
+{% endif %}
             
----
+***
+Technical information
 Website:        {{ site.url }}
 Last update:    {{ site.time }}
-Standards:      HTML5, CSS3   
-Components:     BootStrap, jQuery, Jekyll
+Standards:      HTML5, CSS3, Javascript
+Components:     Bootstrap, Fontawsome, Jekyll
 Software:       GitHub / Visual Studio Code
+Hosting:        GitHub Pages

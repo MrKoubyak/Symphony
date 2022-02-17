@@ -1,6 +1,6 @@
 ---
 permalink: "/robots.txt"
-layout: 
+layout: null
 ---
 User-agent: *
 Disallow:

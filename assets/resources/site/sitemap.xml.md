@@ -1,8 +1,7 @@
 ---
 permalink: "/sitemap.xml"
-layout: 
+layout: null
 ---
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset 
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
@@ -11,13 +10,13 @@ layout:
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>{{ site.url }}</loc>
+    <loc>{{ site.url | absolute_url }}</loc>
     <lastmod>{{ "now" | date_to_xmlschema }}</lastmod>
     <priority>1.0</priority>
   </url>
-
+<!-- Pages -->
 {% for page in site.pages %}
-{% if page.layout == 'page' or page.layout == 'default' %}
+{% if page.title %}
   <url>
     <loc>{{ page.url | absolute_url }}</loc>
     <lastmod>{{ "now" | date_to_xmlschema }}</lastmod>
@@ -25,7 +24,7 @@ layout:
   </url>
 {% endif %}
 {% endfor %}
-
+<!-- Post -->
 {% for page in site.posts %}
   <url>
     <loc>{{ page.url | absolute_url }}</loc>
