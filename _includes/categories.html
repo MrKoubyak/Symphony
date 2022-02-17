@@ -1,4 +1,4 @@
-{% if page.categories %}
+{% if page.categories.size > 0 %}
     {% if include.format == nil %}
     <ul class="{{ include.class | default: "nav"}} py-1">
         {% for category in page.categories %}
