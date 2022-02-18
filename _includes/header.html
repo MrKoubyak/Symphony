@@ -20,7 +20,7 @@
             <!-- Logo -->
             <div id="logo" class="border rounded bg-white shadow">
                 <a href="{{ "/" | absolute_url }}" title="{{ site.title | escape }}" rel="author">
-                    <img src="{{ site.logo | default: "/assets/logo.png" | absolute_url }}" width="100" alt="{{ site.title | escape }}">
+                    <img src="{{ site.logo | default: "/assets/logo.png" | absolute_url }}" width="100px" height="100px" alt="{{ site.title | escape }}">
                 </a>
             </div>
 
@@ -41,7 +41,8 @@
             {% if menus %}
                 {% for menu in menus %}
                 <!-- Site -->
-                <div id="{{ menu.title | slugify }}" {% if menu.position == "left" %}class="me-auto"{% endif %}>
+                {%- assign position = menu.position | downcase -%}
+                <div id="{{ menu.title | slugify }}" {% if position == "left" %}class="me-auto"{% endif %}>
                     <ul class="navbar-nav nav-pills">
                         {% for item in menu.links %}
                         <li class="nav-item">
