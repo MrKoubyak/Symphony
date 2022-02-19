@@ -8,6 +8,11 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1">
 
+{% include analytics.html %}
+
+<!-- Style -->
+<link rel="stylesheet" type="text/css" href="{{ "/assets/styles/main.css" | absolute_url }}">
+
 <!-- Page information -->
 <title>{{ site.title }} | {{ page.title | default: site.tagline }}</title>
 <meta property="og:title" content="{{ page.title | default: site.title }}" />
@@ -33,9 +38,6 @@
 
 <link rel="canonical" href="{{ page.url | absolute_url }}">
 <meta property="og:url" content="{{ page.url | absolute_url }}" />
-
-<!-- Style -->
-<link rel="stylesheet" type="text/css" href="{{ "/assets/styles/main.css" | absolute_url }}">
 
 {%- if webmaster %}
 <!-- Search Engine & Analytics -->
