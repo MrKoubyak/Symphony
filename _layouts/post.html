@@ -29,10 +29,7 @@ layout: default
         <section class="sticky-top pt-3">
             {%- include post-categories.html -%}
             {%- include post-tags.html -%}
-            <div id="toc">
-                <h5>Content</h5>
-                {%- include post-toc.html html=content id="tocScrollSpy" class="nav nav-pills flex-column" item_class="nav-item" anchor_class="nav-link" submenu_class="nav flex-column"  -%}
-            </div>
+            {%- include post-toc.html title="Content" html=content id="tocScrollSpy" class="nav nav-pills flex-column" item_class="nav-item" anchor_class="nav-link" submenu_class="nav flex-column"  -%}
         </section>
     </aside>
 </div>

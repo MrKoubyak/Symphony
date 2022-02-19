@@ -1,5 +1,5 @@
 {%- assign social = site.settings.share | default: site.data.settings.share -%}
-{%- if social.size > 0 -%}
+{%- if social.size > 0 and site.share != false -%}
 <div id="share" class="border-top py-3 my-3">
     <p class="h6 text-center">Share (for immortality)</p>
     <div>

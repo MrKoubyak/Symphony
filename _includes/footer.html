@@ -26,7 +26,7 @@
                         <ul class="nav flex-column pb-3">
                             {% for item in menu.links %}
                             <li class="nav-item mb-2">
-                                <a class="nav-link p-0 text-muted" href="{{ item.link | absolute_url }}" title="About our {{ item.title }}">{{ item.title }}</a>
+                                <a class="nav-link p-0 text-muted" href="{{ item.link | absolute_url }}" title="{{ menu.title }}: {{ item.title }}">{{ item.title }}</a>
                             </li>
                             {% endfor %}
                         </ul>
