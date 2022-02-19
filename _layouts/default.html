@@ -1,7 +1,16 @@
 <!doctype html>
 <html lang="{{ page.language | default: site.language | default: "en" }}">
     <head>
-        {%- include head.html -%}
+        <meta charset="utf-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+
+        {%- include seo.html -%}
+
+        <!-- Style -->
+        <link rel="stylesheet" type="text/css" href="{{ "/assets/styles/main.css" | absolute_url }}">
+        
+        {%- include analytics.html -%}
     </head>
     <body>
         <a href="#main-content" class="visually-hidden">Skip to main content</a>
