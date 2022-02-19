@@ -16,11 +16,11 @@
         <div class="row align-items-center">
             <div class="col">
                 <h1 class="display-1">{{ page.title | default: site.title | default: "Welcome to Symphony theme" | escape }}</h1>
-                <p class="lead">{{ page.excerpt | | default: site.description | default: "Review our documentation to fix issue" | strip_html | escape }}</p>
+                <p class="lead">{{ page.excerpt | default: site.description | default: "Review our documentation to fix issue" | strip_html | escape }}</p>
             </div>
             {% if page.action %}
             <div class="col-4 text-center">
-                <button type="button" class="btn btn-primary btn-lg">Primary</button>
+                <a class="btn btn-primary btn-lg" href="{{ page.action.link }}" role="button" title="{{ page.action.title }}">{{ page.action.title }}</a>
             </div>
             {% endif %}
         </div>
