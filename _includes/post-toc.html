@@ -175,7 +175,7 @@
 {% endcapture %}{% assign tocWorkspace = '' %}{{ deprecation_warnings }}
 
 {% assign title = include.title %}
-{% if jekyll_toc %}
+{% if jekyll_toc.size > 0 %}
 <div id="toc">
     {% if title %}
     <h5>{{title}}</h5>
