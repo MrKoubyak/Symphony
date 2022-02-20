@@ -34,7 +34,7 @@
                 {%- assign key = item | first -%}
                 {% if social[key].link %}
                 <li class="nav-item">
-                    <a class="nav-link ps-0 pe-2 fs-5" href="{{ social[key].link }}{{ social[key].username }}" title="Follow us on {{ social[key].title | default: key | capitalize }}"><i class="fab fa-{{ key | downcase }}"></i></a>
+                    <a class="nav-link ps-0 pe-2 fs-5" href="{{ social[key].link }}" title="Follow us on {{ social[key].title | default: key | capitalize }}"><i class="fab fa-{{ key | downcase }}"></i></a>
                 </li>
                 {% endif %}
                 {%- endfor -%}
