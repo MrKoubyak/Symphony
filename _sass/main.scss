@@ -4,8 +4,7 @@
  * Copyright 2011-2021 The Bootstrap Authors
  * Copyright 2011-2021 Twitter, Inc.
  */
- $font-familly-body: 'Basic', sans-serif;
- $font-familly-title: 'Jockey One', sans-serif;
+
  body
  {
      font-family: $font-familly-body;
@@ -14,32 +13,6 @@
  {
      font-family:  $font-familly-title;
  }
-blockquote
- {
-  margin: 0 0 1rem;
-  border: 1px solid #dee2e6 !important;
-  border-color: #6f42c1 !important;
-  border-width: 10px !important;
-  padding: 3rem !important;
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
-  background-image: var(--bs-gradient) !important;
-  font-size: 2.5rem !important;
-  font-family:  $font-familly-title;
- }
-blockquote:before {
-  position: absolute;
-  content: '\201D';
-  z-index: -1;
-  display: flex;
-  justify-content: center;
-  font-family: "Helvetica Neue", sans-serif;
-  font-weight: bold;
-  color: var(--paletteColor1);
-  opacity: 0.3;
-  transform: rotate(180deg);
-
-}
  /*
    Header
  */

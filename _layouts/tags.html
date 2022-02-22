@@ -10,7 +10,7 @@ layout: page
         role="presentation"
         class="nav-item d-grid pb-2">
         <button
-            id="{{tag | first | slugify | | append: '-tab' }}" 
+            id="{{tag | first | slugify | append: '-tab' }}" 
             data-bs-toggle="pill" 
             data-bs-target="{{tag | first | slugify | prepend: '#' }}" 
             type="button" 
