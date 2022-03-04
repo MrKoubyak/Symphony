@@ -1,13 +1,4 @@
 ---
 layout: page
 ---
-{% for categorie in site.categories %}
-<article>
-    <h3 id="{{ categorie | first | slugify }}" class="border-bottom py-2 mb-3">{{ categorie | first | capitalize }}</h3>
-    <div class="row row-cols-1 row-cols-md-3">
-        {% for item in categorie.last %}
-        {% include card.html %}
-        {% endfor %}
-    </div>
-</article>
-{% endfor %}
+{% site.categories | jsonify %}
